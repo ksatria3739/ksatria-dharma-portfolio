@@ -415,21 +415,24 @@ export default function PortfolioHomePage() {
         </header>
 
         {/* ================= HERO SECTION WITH INTERACTIVE SECURITY TOPOLOGY CANVAS ================= */}
-        <section id="top" className="relative overflow-hidden border-b border-zinc-200 dark:border-zinc-800/90">
+        <section
+          id="top"
+          className="relative overflow-hidden border-b border-zinc-200 dark:border-zinc-800/90 scroll-mt-20"
+        >
           {/* Interactive Zero-Trust Network Mesh Canvas */}
           <KineticSecurityCanvas darkMode={darkMode} />
 
-          <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-12 sm:py-20 lg:py-24">
+          <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-20 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
               {/* Left Column: Narrative & Positioning */}
               <div className="lg:col-span-8 space-y-6">
                 {/* Live Animated Status Indicator + Dynamic Rotating Focus */}
-                <div className="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/90 dark:border-zinc-800 text-xs text-zinc-600 dark:text-zinc-300 shadow-sm">
+                <div className="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/85 dark:bg-zinc-900/85 backdrop-blur-sm border border-zinc-200/90 dark:border-zinc-800 text-xs text-zinc-600 dark:text-zinc-300 shadow-sm">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                   </span>
-                  <span className="font-mono text-[11px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                  <span className="font-mono text-[11px] font-medium uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
                     ACTIVE FOCUS:
                   </span>
                   <span
@@ -440,31 +443,103 @@ export default function PortfolioHomePage() {
                   </span>
                 </div>
 
-                {/* Editorial Headline */}
-                <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-5xl lg:text-[50px] font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 leading-[1.12]">
+                {/* Clean Executive Headline & Structured Bio */}
+                <div className="space-y-5">
+                  <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-bold tracking-[-0.03em] text-zinc-950 dark:text-zinc-50 leading-[1.22] max-w-3xl">
                     {lang === "id" ? (
                       <>
                         Mengamankan{" "}
-                        <span className="font-serif italic font-normal text-zinc-700 dark:text-zinc-300">
-                          infrastruktur digital & cloud
+                        <span className="text-emerald-700 dark:text-emerald-400">
+                          infrastruktur digital &amp; cloud
                         </span>{" "}
                         melalui arsitektur pertahanan yang terukur.
                       </>
                     ) : (
                       <>
                         Securing{" "}
-                        <span className="font-serif italic font-normal text-zinc-700 dark:text-zinc-300">
-                          digital infrastructure & cloud
+                        <span className="text-emerald-700 dark:text-emerald-400">
+                          digital infrastructure &amp; cloud
                         </span>{" "}
                         with scalable enterprise defense.
                       </>
                     )}
                   </h1>
 
-                  <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
-                    {PROFILE_DATA.summary[lang]}
-                  </p>
+                  <div className="space-y-3 text-[15px] sm:text-base text-zinc-600 dark:text-zinc-400 leading-[1.78] max-w-[62ch]">
+                    {lang === "id" ? (
+                      <>
+                        <p>
+                          Berpengalaman lebih dari{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            5 tahun
+                          </span>{" "}
+                          di bidang{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            Cyber Security Engineering
+                          </span>
+                          , pengembangan aplikasi web, dan operasional infrastruktur dalam
+                          mentransformasikan tantangan keamanan kompleks menjadi pertahanan{" "}
+                          <em>enterprise</em> yang tangguh.
+                        </p>
+                        <p>
+                          Saat ini berperan sebagai{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            Senior Technical Product Specialist / Security Product Engineer
+                          </span>{" "}
+                          di{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            PT. Optima Solusindo Informatika
+                          </span>
+                          —memimpin siklus teknis <em>end-to-end</em> mulai dari perancangan
+                          arsitektur, eksekusi POC, implementasi produksi (
+                          <span className="font-medium text-zinc-800 dark:text-zinc-300">
+                            Segura® PAM, Acronis Backup &amp; DR, Sophos, Fortinet, SIEM, XDR/DLP
+                          </span>
+                          ), hingga remediasi insiden SOC/L3 dan kepatuhan{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            ISO 27001
+                          </span>
+                          .
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <p>
+                          With over{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            5 years
+                          </span>{" "}
+                          of hands-on experience in{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            Cyber Security Engineering
+                          </span>
+                          , full-stack web development, and enterprise infrastructure operations, I
+                          specialize in transforming complex security challenges into resilient,
+                          scalable defenses.
+                        </p>
+                        <p>
+                          Currently serving as a{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            Senior Technical Product Specialist / Security Product Engineer
+                          </span>{" "}
+                          at{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            PT. Optima Solusindo Informatika
+                          </span>
+                          —leading the end-to-end technical lifecycle from architecture design, POC
+                          execution, and production deployment (
+                          <span className="font-medium text-zinc-800 dark:text-zinc-300">
+                            Segura® PAM, Acronis Backup &amp; DR, Sophos, Fortinet, SIEM, XDR/DLP
+                          </span>
+                          ) to L3 SOC incident remediation and{" "}
+                          <span className="font-medium text-zinc-900 dark:text-zinc-200">
+                            ISO 27001
+                          </span>{" "}
+                          compliance alignment.
+                        </p>
+                      </>
+                    )}
+                  </div>
                 </div>
 
                 {/* LinkedIn Top Skills Pills */}

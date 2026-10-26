@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-jakarta",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Ksatria Dharma Aldzikri — Senior IT Cyber Security & Technical Product Specialist",
@@ -39,8 +54,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className="scroll-smooth">
-      <body className="bg-[#FAF9F6] text-zinc-900 antialiased selection:bg-zinc-900 selection:text-white dark:selection:bg-zinc-100 dark:selection:text-zinc-900">
+    <html
+      lang="id"
+      className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} scroll-smooth`}
+    >
+      <body className="font-sans bg-[#FAF9F6] text-zinc-900 antialiased selection:bg-zinc-900 selection:text-white dark:selection:bg-zinc-100 dark:selection:text-zinc-900">
         {children}
       </body>
     </html>
