@@ -17,6 +17,8 @@ import {
   CheckCircle2,
   Shield,
   Activity,
+  Globe,
+  Lock,
 } from "lucide-react";
 import {
   PROFILE_DATA,
@@ -763,13 +765,13 @@ export default function PortfolioHomePage() {
 
                 <div className="group">
                   <p className="text-xs font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
-                    {lang === "id" ? "Implementasi Klien" : "Enterprise Clients"}
+                    {lang === "id" ? "Implementasi Klien & Web" : "Enterprise & Web"}
                   </p>
                   <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 mt-1 group-hover:translate-x-1 transition-transform">
-                    8+ {lang === "id" ? "Proyek" : "Deployments"}
+                    9+ {lang === "id" ? "Proyek" : "Deployments"}
                   </p>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
-                    MSIG Life, Bayer, Sucofindo, Arasis, Socare
+                    MSIG Life, Bayer, Sucofindo, Socare.id, PortalBMI.id
                   </p>
                 </div>
 
@@ -958,7 +960,7 @@ export default function PortfolioHomePage() {
             className="py-16 sm:py-24 border-b border-zinc-200 dark:border-zinc-800/90 scroll-mt-16"
           >
             <ScrollReveal>
-              <div className="space-y-10">
+              <div className="space-y-12">
                 {/* Section Header + Filter */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                   <div className="space-y-2">
@@ -967,8 +969,8 @@ export default function PortfolioHomePage() {
                     </p>
                     <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
                       {lang === "id"
-                        ? "Proyek Keamanan Korporasi & Aplikasi Web"
-                        : "Enterprise Security Deployments & Web Systems"}
+                        ? "Proyek Keamanan Korporasi & Platform Web Live"
+                        : "Enterprise Security Deployments & Live Web Platforms"}
                     </h2>
                   </div>
 
@@ -983,7 +985,7 @@ export default function PortfolioHomePage() {
                           : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
                       }`}
                     >
-                      {lang === "id" ? "Semua (8)" : "All Work (8)"}
+                      {lang === "id" ? "Semua (9)" : "All Work (9)"}
                     </button>
                     <button
                       type="button"
@@ -1005,10 +1007,243 @@ export default function PortfolioHomePage() {
                           : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
                       }`}
                     >
-                      {lang === "id" ? "Aplikasi Web Full-Stack (3)" : "Full-Stack Web (3)"}
+                      {lang === "id" ? "Aplikasi Web Full-Stack (4)" : "Full-Stack Web (4)"}
                     </button>
                   </div>
                 </div>
+
+                {/* ================= FEATURED LIVE PRODUCTION WEBSITES SHOWCASE ================= */}
+                {projectFilter !== "cybersecurity" && (
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                        </span>
+                        <span>
+                          {lang === "id"
+                            ? "FEATURED LIVE PRODUCTION WEBSITES (AKTIF & PUBLIK)"
+                            : "FEATURED LIVE PRODUCTION WEBSITES (PUBLIC DEPLOYMENTS)"}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      {/* Live Website Card 1: SOCARE.ID */}
+                      <div className="group rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-[#121317] overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between">
+                        {/* Browser Chrome Bar */}
+                        <div className="px-4 py-3 bg-zinc-100/90 dark:bg-zinc-900/90 border-b border-zinc-200/80 dark:border-zinc-800 flex items-center justify-between gap-3">
+                          <div className="flex items-center gap-1.5 shrink-0">
+                            <span className="w-2.5 h-2.5 rounded-full bg-rose-400/80" />
+                            <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
+                            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80" />
+                          </div>
+                          <a
+                            href="https://socare.id"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 max-w-xs mx-auto px-3 py-1 rounded-md bg-white dark:bg-zinc-950 border border-zinc-200/80 dark:border-zinc-800 flex items-center justify-center gap-1.5 text-[11px] font-mono text-zinc-600 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+                          >
+                            <Lock className="w-3 h-3 text-emerald-500 shrink-0" />
+                            <span className="truncate">https://socare.id</span>
+                            <ArrowUpRight className="w-3 h-3 shrink-0 opacity-70" />
+                          </a>
+                          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 shrink-0">
+                            LIVE
+                          </span>
+                        </div>
+
+                        {/* Interactive Visual Preview Deck */}
+                        <div className="p-6 space-y-5 flex-1 flex flex-col justify-between">
+                          <div className="space-y-4">
+                            {/* Mini Visual Hero Banner Inside Card */}
+                            <div className="relative rounded-xl p-5 bg-gradient-to-br from-zinc-900 via-zinc-900 to-emerald-950 text-white overflow-hidden border border-zinc-800">
+                              <div className="relative z-10 space-y-2">
+                                <div className="flex items-center justify-between gap-2">
+                                  <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400">
+                                    PT. SOCARE GROUP INTERNATIONAL
+                                  </span>
+                                  <Globe className="w-4 h-4 text-zinc-400 group-hover:rotate-12 transition-transform" />
+                                </div>
+                                <h3 className="text-lg sm:text-xl font-bold tracking-tight leading-snug">
+                                  Connecting People. Expanding Business. Creating Global Impact.
+                                </h3>
+                                <p className="text-xs text-zinc-300 leading-relaxed">
+                                  {lang === "id"
+                                    ? "Konsultan Manajemen Internasional: Pendampingan PMA & Investasi Asing, Kepatuhan Regulasi, Pelatihan SDM, Magang Internasional & Smart Invoicing."
+                                    : "International Management Consultancy: Foreign Direct Investment (PMA), Legal Compliance, HR Training, Global Internships & Smart Invoicing."}
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* Description & Highlights */}
+                            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                              {lang === "id"
+                                ? "Merancang dan mengembangkan platform web korporasi resmi socare.id beserta ekosistem Smart Invoicing berproteksi token kriptografi SHA-256 dan pembayaran Kartu Kredit 3D Secure 2.0 / Virtual Account."
+                                : "Designed and engineered the official socare.id corporate web platform alongside a SHA-256 tokenized Smart Invoicing & 3D Secure 2.0 payment ecosystem."}
+                            </p>
+
+                            <div className="flex flex-wrap gap-1.5">
+                              {[
+                                "socare.id (Live)",
+                                "PMA & Global Consulting Portal",
+                                "Smart Invoicing SHA-256",
+                                "3DS 2.0 & Virtual Account",
+                                "Next.js & Modern Web",
+                              ].map((pill) => (
+                                <span
+                                  key={pill}
+                                  className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-zinc-800"
+                                >
+                                  {pill}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Card Footer Actions */}
+                          <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800/80 flex flex-wrap items-center justify-between gap-3">
+                            <a
+                              href="https://socare.id"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-medium transition hover:-translate-y-0.5"
+                            >
+                              <Globe className="w-3.5 h-3.5" />
+                              <span>
+                                {lang === "id" ? "Kunjungi socare.id" : "Visit socare.id"}
+                              </span>
+                              <ArrowUpRight className="w-3.5 h-3.5" />
+                            </a>
+
+                            <button
+                              type="button"
+                              onClick={() => {
+                                const proj = PROJECTS_DATA.find(
+                                  (p) => p.id === "socare-smart-invoicing"
+                                );
+                                if (proj) setSelectedProject(proj);
+                              }}
+                              className="inline-flex items-center gap-1 text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition"
+                            >
+                              <span>
+                                {lang === "id" ? "Lihat Detail Arsitektur" : "View Architecture"}
+                              </span>
+                              <ChevronRight className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Live Website Card 2: PORTALBMI.ID */}
+                      <div className="group rounded-2xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-[#121317] overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between">
+                        {/* Browser Chrome Bar */}
+                        <div className="px-4 py-3 bg-zinc-100/90 dark:bg-zinc-900/90 border-b border-zinc-200/80 dark:border-zinc-800 flex items-center justify-between gap-3">
+                          <div className="flex items-center gap-1.5 shrink-0">
+                            <span className="w-2.5 h-2.5 rounded-full bg-rose-400/80" />
+                            <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
+                            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80" />
+                          </div>
+                          <a
+                            href="https://portalbmi.id"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 max-w-xs mx-auto px-3 py-1 rounded-md bg-white dark:bg-zinc-950 border border-zinc-200/80 dark:border-zinc-800 flex items-center justify-center gap-1.5 text-[11px] font-mono text-zinc-600 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+                          >
+                            <Lock className="w-3 h-3 text-emerald-500 shrink-0" />
+                            <span className="truncate">https://portalbmi.id</span>
+                            <ArrowUpRight className="w-3 h-3 shrink-0 opacity-70" />
+                          </a>
+                          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 shrink-0">
+                            LIVE
+                          </span>
+                        </div>
+
+                        {/* Interactive Visual Preview Deck */}
+                        <div className="p-6 space-y-5 flex-1 flex flex-col justify-between">
+                          <div className="space-y-4">
+                            {/* Mini Visual Hero Banner Inside Card */}
+                            <div className="relative rounded-xl p-5 bg-gradient-to-br from-zinc-900 via-slate-900 to-zinc-800 text-white overflow-hidden border border-zinc-800">
+                              <div className="relative z-10 space-y-2">
+                                <div className="flex items-center justify-between gap-2">
+                                  <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400">
+                                    PORTALBMI.ID · LINTAS BERITA LINTAS NEGARA
+                                  </span>
+                                  <Globe className="w-4 h-4 text-zinc-400 group-hover:rotate-12 transition-transform" />
+                                </div>
+                                <h3 className="text-lg sm:text-xl font-bold tracking-tight leading-snug">
+                                  Portal Media &amp; Berita Aktual Dalam dan Luar Negeri.
+                                </h3>
+                                <p className="text-xs text-zinc-300 leading-relaxed">
+                                  {lang === "id"
+                                    ? "Menyajikan liputan cepat Berita Nasional, Imigran Indonesia (BMI), Mancanegara, Hukum & Kriminalitas, Politik, Pendidikan, dan Sosial Budaya."
+                                    : "Delivering real-time National, Indonesian Migrant Worker (BMI), International, Legal, Political, and Socio-Cultural news coverage."}
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* Description & Highlights */}
+                            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                              {lang === "id"
+                                ? "Membangun, mengoptimalkan performa SEO/Core Web Vitals, dan mengamankan infrastruktur portal media berita digital portalbmi.id dengan arsitektur redaksi multi-kategori dan proteksi keamanan web berlapis."
+                                : "Built, optimized for SEO/Core Web Vitals, and secured the live digital news portal portalbmi.id with multi-category editorial taxonomy and layered web security hardening."}
+                            </p>
+
+                            <div className="flex flex-wrap gap-1.5">
+                              {[
+                                "portalbmi.id (Live)",
+                                "Multi-Rubric News Engine",
+                                "SEO & Core Web Vitals",
+                                "Web Security Hardening",
+                                "High-Traffic Caching",
+                              ].map((pill) => (
+                                <span
+                                  key={pill}
+                                  className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-zinc-800"
+                                >
+                                  {pill}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Card Footer Actions */}
+                          <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800/80 flex flex-wrap items-center justify-between gap-3">
+                            <a
+                              href="https://portalbmi.id"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-medium transition hover:-translate-y-0.5"
+                            >
+                              <Globe className="w-3.5 h-3.5" />
+                              <span>
+                                {lang === "id" ? "Kunjungi portalbmi.id" : "Visit portalbmi.id"}
+                              </span>
+                              <ArrowUpRight className="w-3.5 h-3.5" />
+                            </a>
+
+                            <button
+                              type="button"
+                              onClick={() => {
+                                const proj = PROJECTS_DATA.find(
+                                  (p) => p.id === "portalbmi-news-portal"
+                                );
+                                if (proj) setSelectedProject(proj);
+                              }}
+                              className="inline-flex items-center gap-1 text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition"
+                            >
+                              <span>
+                                {lang === "id" ? "Lihat Detail Arsitektur" : "View Architecture"}
+                              </span>
+                              <ChevronRight className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Editorial Case Study List */}
                 <div className="divide-y divide-zinc-200 dark:divide-zinc-800/90 border-t border-b border-zinc-200 dark:border-zinc-800/90">
@@ -1023,15 +1258,30 @@ export default function PortfolioHomePage() {
                           <div className="lg:col-span-3 flex lg:flex-col justify-between gap-2">
                             <div className="flex items-center gap-2.5">
                               <span className="text-xs font-mono text-zinc-400 dark:text-zinc-500 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                                0{idx + 1}
+                                {String(idx + 1).padStart(2, "0")}
                               </span>
                               <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                                 {project.clientOrOrg}
                               </span>
                             </div>
-                            <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400 lg:pl-6">
-                              {project.year} · {project.badge[lang]}
-                            </span>
+                            <div className="flex flex-wrap items-center gap-2 lg:pl-6">
+                              <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
+                                {project.year} · {project.badge[lang]}
+                              </span>
+                              {project.liveUrl && (
+                                <a
+                                  href={project.liveUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/25 text-[11px] font-mono font-medium hover:bg-emerald-500/20 transition"
+                                >
+                                  <Globe className="w-3 h-3" />
+                                  <span>{project.liveDomain}</span>
+                                  <ArrowUpRight className="w-3 h-3" />
+                                </a>
+                              )}
+                            </div>
                           </div>
 
                           {/* Title, Summary & Tech */}

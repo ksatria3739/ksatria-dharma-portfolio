@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { X, ArrowUpRight, Check } from "lucide-react";
+import { X, ArrowUpRight, Check, Globe } from "lucide-react";
 import { ProjectItem } from "@/data/portfolioData";
 
 interface Props {
@@ -33,6 +33,21 @@ export default function ProjectBlueprintModal({ project, lang, onClose }: Props)
               <span className="text-zinc-800 dark:text-zinc-200 font-medium">
                 {project.badge[lang]}
               </span>
+              {project.liveUrl && (
+                <>
+                  <span>•</span>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/25 font-sans font-semibold hover:bg-emerald-500/20 transition"
+                  >
+                    <Globe className="w-3 h-3" />
+                    <span>{project.liveDomain || project.liveUrl}</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </>
+              )}
             </div>
             <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 leading-snug">
               {project.title}
@@ -116,17 +131,35 @@ export default function ProjectBlueprintModal({ project, lang, onClose }: Props)
         </div>
 
         {/* Footer */}
-        <div className="px-6 sm:px-8 py-4 bg-zinc-50 dark:bg-[#0c0d0f] border-t border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between">
+        <div className="px-6 sm:px-8 py-4 bg-zinc-50 dark:bg-[#0c0d0f] border-t border-zinc-200 dark:border-zinc-800/80 flex flex-wrap items-center justify-between gap-3">
           <span className="text-xs text-zinc-500 dark:text-zinc-400">
             Status: <strong className="text-zinc-800 dark:text-zinc-200">{project.status}</strong>
           </span>
-          <button
-            type="button"
-            onClick={onClose}
-            className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-medium transition"
-          >
-            {lang === "id" ? "Tutup Ringkasan" : "Close Summary"}
-          </button>
+          <div className="flex items-center gap-2.5">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-medium transition shadow-sm"
+              >
+                <Globe className="w-3.5 h-3.5" />
+                <span>
+                  {lang === "id"
+                    ? `Kunjungi ${project.liveDomain || "Website"}`
+                    : `Visit ${project.liveDomain || "Live Site"}`}
+                </span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            )}
+            <button
+              type="button"
+              onClick={onClose}
+              className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-medium transition"
+            >
+              {lang === "id" ? "Tutup Ringkasan" : "Close Summary"}
+            </button>
+          </div>
         </div>
       </div>
     </div>

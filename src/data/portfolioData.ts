@@ -17,6 +17,8 @@ export interface ProjectItem {
   category: "cybersecurity" | "fullstack";
   badge: { en: string; id: string };
   summary: { en: string; id: string };
+  liveUrl?: string;
+  liveDomain?: string;
   architectureDetails: {
     challenge: { en: string; id: string };
     solution: { en: string; id: string };
@@ -376,42 +378,85 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     id: "socare-smart-invoicing",
-    title: "Smart Invoicing, SHA-256 Tokenized Portal & 3DS 2.0 Fintech Checkout",
-    clientOrOrg: "PT Socare Group International",
-    year: "2026",
+    title: "Socare.id — Corporate Consultancy Platform & Smart Invoicing Ecosystem",
+    clientOrOrg: "PT. Socare Group International",
+    year: "2025 – 2026",
     category: "fullstack",
+    liveUrl: "https://socare.id",
+    liveDomain: "socare.id",
     badge: {
-      en: "Next.js 15 & Fintech Security",
-      id: "Next.js 15 & Keamanan Fintech",
+      en: "Live Corporate Platform & Fintech",
+      id: "Platform Korporasi Live & Fintech",
     },
     summary: {
-      en: "Built an enterprise Smart Invoicing, Payment Link Generator (3D Secure 2.0 Credit Card & Virtual Account), and KYB-compliant Corporate Storefront with SHA-256 cryptographic invoice tokens.",
-      id: "Membangun sistem Smart Invoicing korporasi, generator link pembayaran (Kartu Kredit 3D Secure 2.0 & Virtual Account), serta katalog e-commerce terintegrasi dengan keamanan token kriptografi SHA-256.",
+      en: "Developed the official web ecosystem for PT. Socare Group International (socare.id)—an international management consultancy specializing in Foreign Direct Investment (PMA), regulatory compliance, HR training, and international internship programs—complete with a SHA-256 tokenized Smart Invoicing & 3DS 2.0 payment portal.",
+      id: "Mengembangkan ekosistem web resmi PT. Socare Group International (socare.id)—konsultan manajemen internasional yang berfokus pada pendampingan investasi asing (PMA), kepatuhan hukum & regulasi, pelatihan SDM, serta program magang internasional—lengkap dengan sistem Smart Invoicing berproteksi kriptografi SHA-256 & pembayaran 3DS 2.0.",
     },
     architectureDetails: {
       challenge: {
-        en: "Preventing Insecure Direct Object Reference (IDOR) on public corporate invoices while delivering seamless Credit Card 3DS 2.0, Bank VA settlement, SMTP OTP verification, and 1-click WhatsApp billing.",
-        id: "Mencegah celah keamanan IDOR pada dokumen invoice publik sekaligus menghadirkan pembayaran Kartu Kredit 3DS 2.0, Virtual Account bank, verifikasi OTP email SMTP, dan penagihan WhatsApp 1-klik.",
+        en: "Establishing a credible, globally accessible digital presence at socare.id for foreign investors and institutional partners while securing corporate invoicing and multi-channel payment workflows against IDOR vulnerabilities.",
+        id: "Membangun kehadiran digital korporasi yang kredibel dan berstandar global di socare.id bagi investor asing serta mitra institusi, sekaligus mengamankan dokumen tagihan korporasi dan transaksi pembayaran dari celah keamanan IDOR.",
       },
       solution: {
-        en: "Engineered with Next.js 15 (App Router, TypeScript), Prisma ORM, SHA-256 tokenized document URLs, Hostinger SMTP 6-digit OTP verification, and modular Midtrans/Xendit payment adapters.",
-        id: "Dikembangkan menggunakan Next.js 15 (App Router, TypeScript), Prisma ORM, URL dokumen terproteksi hash SHA-256, verifikasi OTP 6-digit via SMTP, serta adaptor payment gateway Midtrans/Xendit.",
+        en: "Architected the live corporate web platform at socare.id alongside a Next.js 15 & TypeScript Smart Invoicing module featuring SHA-256 tokenized document URLs, SMTP 6-digit OTP verification, and 3D Secure 2.0 Credit Card / Virtual Account checkout.",
+        id: "Merancang platform web korporasi live di socare.id beserta modul Smart Invoicing berbasis Next.js 15 & TypeScript yang dilengkapi URL dokumen terproteksi hash SHA-256, verifikasi OTP 6-digit via SMTP, serta pembayaran Kartu Kredit 3DS 2.0 & Virtual Account.",
       },
       deliverables: {
         en: [
-          "SHA-256 cryptographic tokenized invoice & checkout endpoints (anti-IDOR)",
-          "Interactive 3D Secure 2.0 Credit Card & Multi-Bank Virtual Account payment engine",
+          "Official live corporate platform at https://socare.id showcasing PMA consulting, legal compliance, strategic business partnerships, and international internship programs",
+          "SHA-256 cryptographic tokenized invoice & checkout endpoints (anti-IDOR) with 3D Secure 2.0 Credit Card & Multi-Bank Virtual Account integration",
           "Mandatory 6-digit Email OTP verification & Executive Admin Dashboard with 1-click WhatsApp billing",
         ],
         id: [
-          "Endpoint invoice & checkout terproteksi kriptografi SHA-256 (anti-IDOR)",
-          "Mesin checkout Kartu Kredit 3D Secure 2.0 & Virtual Account Multi-Bank",
+          "Platform web korporasi live di https://socare.id untuk layanan pendampingan PMA, kepatuhan regulasi, kemitraan bisnis strategis, dan program magang internasional",
+          "Endpoint invoice & checkout terproteksi kriptografi SHA-256 (anti-IDOR) dengan integrasi Kartu Kredit 3D Secure 2.0 & Virtual Account Multi-Bank",
           "Verifikasi wajib OTP Email 6-digit & Dashboard Admin dengan generator tagihan WhatsApp 1-klik",
         ],
       },
     },
-    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Prisma ORM", "SHA-256 Security", "3DS 2.0 & Payment Gateway"],
-    status: "Production Ready",
+    technologies: ["socare.id (Live)", "Next.js 15", "TypeScript", "Tailwind CSS", "Prisma ORM", "SHA-256 Security", "3DS 2.0 Payment Gateway"],
+    status: "Live Production (socare.id)",
+  },
+  {
+    id: "portalbmi-news-portal",
+    title: "PortalBMI.id — Cross-Border Digital News & Media Publishing Platform",
+    clientOrOrg: "PORTALBMI.ID (Lintas Berita Lintas Negara)",
+    year: "2025 – 2026",
+    category: "fullstack",
+    liveUrl: "https://portalbmi.id",
+    liveDomain: "portalbmi.id",
+    badge: {
+      en: "Live Media Portal & Web Security",
+      id: "Portal Berita Live & Keamanan Web",
+    },
+    summary: {
+      en: "Engineered, deployed, and secured the live digital news portal PortalBMI.id ('Lintas Berita Lintas Negara'), delivering real-time domestic, international, legal, and Indonesian migrant worker (BMI) news coverage with high-speed content delivery and web security hardening.",
+      id: "Membangun, mengelola deployment, dan mengamankan portal berita digital live PortalBMI.id ('Lintas Berita Lintas Negara') yang menyajikan liputan aktual berita nasional, mancanegara, hukum, politik, serta berita pekerja migran Indonesia (BMI) dengan performa tinggi dan keamanan web berlapis.",
+    },
+    architectureDetails: {
+      challenge: {
+        en: "Delivering fast, mobile-responsive news publishing across multiple rubrics (National, International, Migrant Workers/Imigran Indonesia, Law & Crime, Politics, Social & Culture) while maintaining high availability, strong SEO indexing, and protection against automated bot scraping and DDoS traffic.",
+        id: "Menghadirkan publikasi berita yang cepat dan responsif di berbagai rubrik (Berita Nasional, Mancanegara, Imigran Indonesia, Hukum & Kriminalitas, Politik, Sosial & Budaya) sekaligus menjaga ketersediaan tinggi, optimasi SEO, serta perlindungan dari serangan bot dan DDoS.",
+      },
+      solution: {
+        en: "Built and optimized the production publishing platform at portalbmi.id with structured multi-category editorial taxonomy, trending news engines, Core Web Vitals & SEO schema optimization, caching layers, and perimeter web security hardening.",
+        id: "Merancang dan mengoptimalkan arsitektur portal berita produksi di portalbmi.id dengan taksonomi redaksi multi-kategori, mesin berita trending, optimasi skema SEO & Core Web Vitals, akselerasi caching, serta hardening keamanan aplikasi web.",
+      },
+      deliverables: {
+        en: [
+          "Live production news portal at https://portalbmi.id ('Lintas Berita Lintas Negara') with dynamic multi-category editorial grids",
+          "Comprehensive rubric architecture covering Berita Nasional, Imigran Indonesia, Mancanegara, Hukum & Kriminalitas, Politik, Pendidikan, and Sosial Budaya",
+          "Search Engine Optimization (SEO), social media syndication integration, SSL/TLS encryption, and web security hardening",
+        ],
+        id: [
+          "Portal berita produksi live di https://portalbmi.id ('Lintas Berita Lintas Negara') dengan tata letak redaksi multi-kategori yang dinamis",
+          "Arsitektur rubrik komprehensif: Berita Nasional, Imigran Indonesia, Mancanegara, Hukum & Kriminalitas, Politik, Pendidikan, serta Sosial & Budaya",
+          "Optimasi penuh SEO & kecepatan akses, integrasi jejaring media sosial, enkripsi SSL/TLS, serta hardening keamanan server & CMS",
+        ],
+      },
+    },
+    technologies: ["portalbmi.id (Live)", "Web Publishing Architecture", "SEO & Core Web Vitals", "Web Security Hardening", "SSL/TLS & Caching", "Responsive Editorial UI"],
+    status: "Live Production (portalbmi.id)",
   },
   {
     id: "rumah-tani-marketplace",
