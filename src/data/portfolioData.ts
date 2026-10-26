@@ -492,6 +492,19 @@ export const PROJECTS_DATA: ProjectItem[] = [
 ];
 
 export const CERTIFICATIONS_DATA: CertificationItem[] = [
+  // Google Cybersecurity Professional Certificate (Top Featured)
+  {
+    id: "google-cybersecurity-professional",
+    title: "Google Cybersecurity Professional Certificate",
+    issuer: "Google (Google Career Certificates / LinkedIn Verified)",
+    date: "LinkedIn Verified Credential",
+    category: "Google, ICSI & Acronis",
+    verified: true,
+    description: {
+      en: "Comprehensive 8-course professional certification by Google covering SIEM tools (Splunk/Chronicle), Linux, SQL, Python security automation, IDS, network defense, risk management (NIST/CSF), and incident response.",
+      id: "Sertifikasi profesional komprehensif dari Google yang mencakup operasional SIEM, keamanan jaringan & IDS, Linux, SQL, otomatisasi Python untuk keamanan siber, manajemen risiko (NIST/CSF), serta penanganan insiden.",
+    },
+  },
   // Fortinet & ISC2
   {
     id: "fortinet-nse-3",

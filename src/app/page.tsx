@@ -127,11 +127,11 @@ export default function PortfolioHomePage() {
   );
 
   const certCategories = [
-    { key: "All", label: lang === "id" ? "Semua (17)" : "All (17)" },
+    { key: "All", label: lang === "id" ? "Semua (18)" : "All (18)" },
+    { key: "Google, ICSI & Acronis", label: "Google, ICSI & Acronis (6)" },
     { key: "Fortinet & ISC2", label: "Fortinet & ISC2 (6)" },
     { key: "Segura® PAM", label: "Segura® PAM (4)" },
     { key: "Sophos", label: "Sophos (2)" },
-    { key: "Google, ICSI & Acronis", label: "Google, ICSI & Acronis (5)" },
   ];
 
   const filteredCerts = CERTIFICATIONS_DATA.filter((c) =>
@@ -196,7 +196,7 @@ export default function PortfolioHomePage() {
                 href="#credentials"
                 className="hover:text-zinc-950 dark:hover:text-white transition"
               >
-                {lang === "id" ? "Sertifikasi (17)" : "Credentials (17)"}
+                {lang === "id" ? "Sertifikasi (18)" : "Credentials (18)"}
               </a>
               <a
                 href="#background"
@@ -288,7 +288,7 @@ export default function PortfolioHomePage() {
                   03 / {lang === "id" ? "Studi Kasus & Proyek" : "Selected Work"}
                 </a>
                 <a href="#credentials" onClick={() => setMobileMenuOpen(false)}>
-                  04 / {lang === "id" ? "Lisensi & Sertifikasi (17)" : "Certifications (17)"}
+                  04 / {lang === "id" ? "Lisensi & Sertifikasi (18)" : "Certifications (18)"}
                 </a>
                 <a href="#background" onClick={() => setMobileMenuOpen(false)}>
                   05 / {lang === "id" ? "Pendidikan & Dedikasi" : "Background"}
@@ -416,7 +416,7 @@ export default function PortfolioHomePage() {
                     className="inline-flex items-center gap-1.5 px-3.5 py-2.5 text-xs sm:text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition"
                   >
                     <span>
-                      {lang === "id" ? "Lihat 17 Sertifikasi" : "View 17 Certifications"}
+                      {lang === "id" ? "Lihat 18 Sertifikasi" : "View 18 Certifications"}
                     </span>
                     <ChevronRight className="w-4 h-4" />
                   </a>
@@ -467,7 +467,7 @@ export default function PortfolioHomePage() {
                       <div className="flex items-center justify-between">
                         <span className="text-zinc-400 dark:text-zinc-500">Kredensial</span>
                         <span className="font-medium text-zinc-800 dark:text-zinc-200">
-                          Fortinet · Sophos · Segura
+                          Google · Fortinet · Sophos · Segura
                         </span>
                       </div>
                     </div>
@@ -521,10 +521,10 @@ export default function PortfolioHomePage() {
                   {lang === "id" ? "Lisensi & Sertifikasi" : "Verified Credentials"}
                 </p>
                 <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 mt-1">
-                  17 {lang === "id" ? "Sertifikasi" : "Certifications"}
+                  18 {lang === "id" ? "Sertifikasi" : "Certifications"}
                 </p>
                 <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
-                  Fortinet NSE 1-3, ISC2 CPE, Sophos, Segura, ICSI
+                  Google Cybersecurity, Fortinet, Sophos, Segura, ICSI
                 </p>
               </div>
             </div>
@@ -795,13 +795,13 @@ export default function PortfolioHomePage() {
                   </p>
                   <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
                     {lang === "id"
-                      ? "17 Sertifikasi Keamanan Siber & Infrastruktur"
-                      : "17 Verified Cybersecurity & Infrastructure Certifications"}
+                      ? "18 Sertifikasi Keamanan Siber & Infrastruktur"
+                      : "18 Verified Cybersecurity & Infrastructure Certifications"}
                   </h2>
                   <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                     {lang === "id"
-                      ? "Seluruh sertifikasi resmi dari Fortinet Training Institute, ISC2, Sophos Academy, Segura® University, Google, ICSI, Acronis, dan Cyble beserta dokumen sertifikat PDF asli."
-                      : "Official certifications from Fortinet Training Institute, ISC2, Sophos Academy, Segura® University, Google, ICSI, Acronis, and Cyble with verifiable PDF credentials."}
+                      ? "Termasuk Google Cybersecurity Professional Certificate, rangkaian sertifikasi resmi Fortinet Training Institute, ISC2, Sophos Academy, Segura® University, ICSI, Acronis, dan Cyble."
+                      : "Including the Google Cybersecurity Professional Certificate, alongside official credentials from Fortinet Training Institute, ISC2, Sophos Academy, Segura® University, ICSI, Acronis, and Cyble."}
                   </p>
                 </div>
 
