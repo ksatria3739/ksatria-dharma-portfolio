@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { X, ShieldAlert, Cpu, CheckCircle2, Layers, Building2, Calendar } from "lucide-react";
+import { X, ArrowUpRight, Check } from "lucide-react";
 import { ProjectItem } from "@/data/portfolioData";
 
 interface Props {
@@ -15,103 +15,98 @@ export default function ProjectBlueprintModal({ project, lang, onClose }: Props)
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-zinc-950/60 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl rounded-2xl border border-cyan-500/35 bg-[#070e22] text-slate-100 shadow-[0_0_70px_-10px_rgba(0,240,255,0.28)] overflow-hidden max-h-[90vh] flex flex-col"
+        className="relative w-full max-w-2xl rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#111215] text-zinc-900 dark:text-zinc-100 shadow-2xl overflow-hidden max-h-[88vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Modal Header */}
-        <div className="px-6 py-4 bg-[#0b1633] border-b border-cyan-500/20 flex items-start justify-between gap-4">
-          <div>
-            <div className="flex flex-wrap items-center gap-2 mb-1.5">
-              <span className="text-[11px] font-mono uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
+        {/* Header */}
+        <div className="px-6 sm:px-8 py-6 border-b border-zinc-200 dark:border-zinc-800/80 flex items-start justify-between gap-4">
+          <div className="space-y-1.5">
+            <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-500 dark:text-zinc-400">
+              <span>{project.clientOrOrg}</span>
+              <span>•</span>
+              <span>{project.year}</span>
+              <span>•</span>
+              <span className="text-zinc-800 dark:text-zinc-200 font-medium">
                 {project.badge[lang]}
               </span>
-              <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 px-2.5 py-0.5 rounded-full">
-                ● {project.status}
-              </span>
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-white leading-snug">
+            <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 leading-snug">
               {project.title}
             </h3>
-            <div className="flex flex-wrap items-center gap-4 mt-1 text-xs text-slate-400">
-              <span className="inline-flex items-center gap-1.5">
-                <Building2 className="w-3.5 h-3.5 text-cyan-400" />
-                {project.clientOrOrg}
-              </span>
-              <span className="inline-flex items-center gap-1.5 font-mono">
-                <Calendar className="w-3.5 h-3.5 text-cyan-400" />
-                {project.year}
-              </span>
-            </div>
           </div>
 
           <button
             type="button"
             onClick={onClose}
-            className="p-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition"
-            aria-label="Close modal"
+            className="p-2 rounded-full border border-zinc-200 dark:border-zinc-800 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition shrink-0"
+            aria-label="Close"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Modal Body */}
-        <div className="p-6 space-y-5 overflow-y-auto text-sm">
-          {/* Challenge */}
-          <div className="p-4 rounded-xl bg-slate-900/80 border border-rose-500/20">
-            <div className="flex items-center gap-2 text-rose-400 font-semibold text-xs uppercase tracking-wider mb-1.5">
-              <ShieldAlert className="w-4 h-4" />
-              {lang === "en" ? "Operational & Security Challenge" : "Tantangan Operasional & Keamanan"}
-            </div>
-            <p className="text-slate-300 leading-relaxed">
+        {/* Body */}
+        <div className="p-6 sm:p-8 space-y-6 overflow-y-auto text-sm leading-relaxed">
+          {/* Context / Challenge */}
+          <div className="space-y-2">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+              01 / {lang === "id" ? "Konteks & Tantangan" : "Context & Challenge"}
+            </h4>
+            <p className="text-zinc-700 dark:text-zinc-300">
               {project.architectureDetails.challenge[lang]}
             </p>
           </div>
 
-          {/* Architectural Solution */}
-          <div className="p-4 rounded-xl bg-slate-900/80 border border-cyan-500/25">
-            <div className="flex items-center gap-2 text-cyan-400 font-semibold text-xs uppercase tracking-wider mb-1.5">
-              <Cpu className="w-4 h-4" />
-              {lang === "en" ? "Architectural Solution & Execution" : "Solusi Arsitektur & Eksekusi Teknis"}
-            </div>
-            <p className="text-slate-300 leading-relaxed">
+          <div className="border-t border-zinc-100 dark:border-zinc-800/70" />
+
+          {/* Approach / Solution */}
+          <div className="space-y-2">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+              02 / {lang === "id" ? "Pendekatan & Solusi Teknis" : "Technical Approach & Solution"}
+            </h4>
+            <p className="text-zinc-700 dark:text-zinc-300">
               {project.architectureDetails.solution[lang]}
             </p>
           </div>
 
-          {/* Deliverables */}
-          <div>
-            <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs uppercase tracking-wider mb-2.5">
-              <CheckCircle2 className="w-4 h-4" />
-              {lang === "en" ? "Key Technical Deliverables & Impact" : "Deliverables Teknis & Dampak Proyek"}
-            </div>
-            <ul className="space-y-2">
-              {project.architectureDetails.deliverables[lang].map((item, i) => (
+          <div className="border-t border-zinc-100 dark:border-zinc-800/70" />
+
+          {/* Key Deliverables */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+              03 / {lang === "id" ? "Hasil & Implementasi Utama" : "Key Deliverables & Impact"}
+            </h4>
+            <ul className="space-y-2.5">
+              {project.architectureDetails.deliverables[lang].map((item, idx) => (
                 <li
-                  key={i}
-                  className="flex items-start gap-2.5 p-2.5 rounded-lg bg-[#0b152e] border border-slate-800 text-slate-200 text-xs sm:text-sm"
+                  key={idx}
+                  className="flex items-start gap-3 text-zinc-700 dark:text-zinc-300"
                 >
-                  <span className="text-emerald-400 font-mono font-bold mt-0.5">0{i + 1}.</span>
+                  <span className="mt-1 w-4 h-4 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center shrink-0">
+                    <Check className="w-2.5 h-2.5 text-zinc-700 dark:text-zinc-300" />
+                  </span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Tech Stack */}
-          <div>
-            <div className="flex items-center gap-2 text-slate-400 font-semibold text-xs uppercase tracking-wider mb-2">
-              <Layers className="w-4 h-4 text-cyan-400" />
-              {lang === "en" ? "Technologies & Security Protocols" : "Teknologi & Protokol Keamanan"}
-            </div>
-            <div className="flex flex-wrap gap-2">
+          <div className="border-t border-zinc-100 dark:border-zinc-800/70" />
+
+          {/* Technologies */}
+          <div className="space-y-2.5">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+              04 / {lang === "id" ? "Teknologi & Platform" : "Technologies & Platforms"}
+            </h4>
+            <div className="flex flex-wrap gap-1.5">
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 rounded-md text-xs font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/25"
+                  className="px-2.5 py-1 rounded-md text-xs font-medium bg-zinc-100 dark:bg-zinc-800/90 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-zinc-700/60"
                 >
                   {tech}
                 </span>
@@ -121,16 +116,16 @@ export default function ProjectBlueprintModal({ project, lang, onClose }: Props)
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-3.5 bg-[#0b1633] border-t border-slate-800 flex items-center justify-between">
-          <span className="text-xs font-mono text-slate-400">
-            ARCHITECT: KSATRIA DHARMA ALDZIKRI
+        <div className="px-6 sm:px-8 py-4 bg-zinc-50 dark:bg-[#0c0d0f] border-t border-zinc-200 dark:border-zinc-800/80 flex items-center justify-between">
+          <span className="text-xs text-zinc-500 dark:text-zinc-400">
+            Status: <strong className="text-zinc-800 dark:text-zinc-200">{project.status}</strong>
           </span>
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-xs transition"
+            className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-medium transition"
           >
-            {lang === "en" ? "Close Blueprint" : "Tutup Blueprint"}
+            {lang === "id" ? "Tutup Ringkasan" : "Close Summary"}
           </button>
         </div>
       </div>
