@@ -743,14 +743,14 @@ export const EDUCATION_DATA = [
   {
     institution: "Universitas Terbuka",
     degree: {
-      en: "Bachelor of Science (S1) — Information Technology / Computer & Information Systems Security",
-      id: "Sarjana (S1) — Teknologi Informasi / Keamanan Sistem Informasi",
+      en: "Bachelor's Degree (S1) in Information Systems (Sistem Informasi)",
+      id: "Sarjana (S1) Sistem Informasi",
     },
     period: "2022 – 2026",
     location: "South Tangerang, Indonesia",
     description: {
-      en: "Focused on Computer & Information Systems Security, Information Assurance, Network Engineering, Statistical Computing (R), and Web-Based Programming while working full-time in Enterprise Cybersecurity.",
-      id: "Berfokus pada Keamanan Sistem Informasi, Jaminan Informasi (Information Assurance), Rekayasa Jaringan, Komputasi Statistik R, dan Pemrograman Web sembari berkarier penuh waktu di bidang Keamanan Siber.",
+      en: "Focused on Information Systems Architecture, Enterprise Database Management, Information Systems Security, Statistical Computing (R), and Web-Based Programming while working full-time in Enterprise Cybersecurity.",
+      id: "Berfokus pada Arsitektur Sistem Informasi, Manajemen Basis Data Korporasi, Keamanan Sistem Informasi, Komputasi Statistik R, dan Pemrograman Berbasis Web sembari berkarier penuh waktu di bidang Keamanan Siber.",
     },
   },
   {

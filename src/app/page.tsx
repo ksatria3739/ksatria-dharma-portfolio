@@ -454,21 +454,29 @@ export default function PortfolioHomePage() {
                     </div>
 
                     <div className="pt-2.5 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1.5 text-xs text-zinc-600 dark:text-zinc-400">
-                      <div className="flex items-center justify-between">
-                        <span className="text-zinc-400 dark:text-zinc-500">Organisasi</span>
-                        <span className="font-medium text-zinc-800 dark:text-zinc-200">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-zinc-400 dark:text-zinc-500">
+                          {lang === "id" ? "Tempat Kerja Saat Ini" : "Current Workplace"}
+                        </span>
+                        <span className="font-medium text-zinc-800 dark:text-zinc-200 text-right">
                           PT. Optima Solusindo
                         </span>
                       </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-zinc-400 dark:text-zinc-500">Pendidikan</span>
-                        <span className="font-medium text-zinc-800 dark:text-zinc-200">
-                          S1 TI — Univ. Terbuka
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-zinc-400 dark:text-zinc-500">
+                          {lang === "id" ? "Pendidikan" : "Education"}
+                        </span>
+                        <span className="font-medium text-zinc-800 dark:text-zinc-200 text-right">
+                          {lang === "id"
+                            ? "S1 Sistem Informasi — UT"
+                            : "B.S. Information Systems — UT"}
                         </span>
                       </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-zinc-400 dark:text-zinc-500">Kredensial</span>
-                        <span className="font-medium text-zinc-800 dark:text-zinc-200">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-zinc-400 dark:text-zinc-500">
+                          {lang === "id" ? "Kredensial" : "Credentials"}
+                        </span>
+                        <span className="font-medium text-zinc-800 dark:text-zinc-200 text-right">
                           Google · Fortinet · Sophos · Segura
                         </span>
                       </div>
@@ -904,8 +912,8 @@ export default function PortfolioHomePage() {
                 </h2>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                   {lang === "id"
-                    ? "Pendidikan formal di bidang Teknologi Informasi serta Keamanan Sistem Informasi (Computer & Information Systems Security)."
-                    : "Formal academic education in Information Technology and Computer & Information Systems Security."}
+                    ? "Pendidikan formal Sarjana (S1) pada program studi Sistem Informasi di Universitas Terbuka."
+                    : "Formal Bachelor's degree (S1) education in Information Systems at Universitas Terbuka."}
                 </p>
               </div>
 
@@ -1051,20 +1059,30 @@ export default function PortfolioHomePage() {
                       onChange={(e) => setInquiryTopic(e.target.value)}
                       className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF9F6] dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 focus:outline-none focus:border-zinc-900 dark:focus:border-zinc-400"
                     >
-                      <option value="Implementasi Privileged Access Management (PAM - Segura)">
-                        Implementasi Privileged Access Management (PAM - Segura)
+                      <option value="Privileged Access Management (PAM - Segura)">
+                        {lang === "id"
+                          ? "Implementasi Privileged Access Management (PAM - Segura)"
+                          : "Privileged Access Management (PAM - Segura) Implementation"}
                       </option>
-                      <option value="Keamanan Jaringan & Endpoint (Fortinet FortiGate / Sophos)">
-                        Keamanan Jaringan & Endpoint (Fortinet FortiGate / Sophos)
+                      <option value="Network & Endpoint Security (Fortinet FortiGate / Sophos)">
+                        {lang === "id"
+                          ? "Keamanan Jaringan & Endpoint (Fortinet FortiGate / Sophos)"
+                          : "Network & Endpoint Security (Fortinet FortiGate / Sophos)"}
                       </option>
-                      <option value="Solusi Backup, Disaster Recovery & XDR/DLP (Acronis)">
-                        Solusi Backup, Disaster Recovery & XDR/DLP (Acronis)
+                      <option value="Backup, Disaster Recovery & XDR/DLP (Acronis)">
+                        {lang === "id"
+                          ? "Solusi Backup, Disaster Recovery & XDR/DLP (Acronis)"
+                          : "Backup, Disaster Recovery & XDR/DLP Solutions (Acronis)"}
                       </option>
-                      <option value="Pengembangan Aplikasi Web Full-Stack">
-                        Pengembangan Aplikasi Web Full-Stack
+                      <option value="Full-Stack Web Application Engineering">
+                        {lang === "id"
+                          ? "Pengembangan Aplikasi Web Full-Stack"
+                          : "Full-Stack Web Application Engineering"}
                       </option>
-                      <option value="Peluang Karier / Rekrutmen Profesional">
-                        Peluang Karier / Rekrutmen Profesional
+                      <option value="Professional Career / Recruitment Opportunity">
+                        {lang === "id"
+                          ? "Peluang Karier / Rekrutmen Profesional"
+                          : "Professional Career / Recruitment Opportunity"}
                       </option>
                     </select>
                   </div>
