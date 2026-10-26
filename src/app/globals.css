@@ -15,6 +15,86 @@ body {
   overflow-x: hidden;
 }
 
+/* Infinite Kinetic Marquee Animation */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 36s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Slow Orbital Security Ring Rotation */
+@keyframes orbitRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitRotateReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-orbit-slow {
+  animation: orbitRotate 28s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbitRotateReverse 34s linear infinite;
+}
+
+/* Gentle Floating Card Animation */
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-subtle {
+  animation: floatSubtle 5.5s ease-in-out infinite;
+}
+
+/* Radar Scan Sweep */
+@keyframes scanSweep {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateY(350%);
+    opacity: 0;
+  }
+}
+
+.animate-scan-sweep {
+  animation: scanSweep 5s ease-in-out infinite;
+}
+
 /* Subtle custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
