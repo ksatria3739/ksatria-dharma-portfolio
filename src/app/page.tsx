@@ -394,6 +394,14 @@ export default function PortfolioHomePage() {
                   LinkedIn ↗
                 </a>
                 <a
+                  href={PROFILE_DATA.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-2 text-center rounded-lg border border-zinc-300 dark:border-zinc-700 text-xs font-medium"
+                >
+                  Instagram ↗
+                </a>
+                <a
                   href={PROFILE_DATA.resumePdfUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -496,6 +504,16 @@ export default function PortfolioHomePage() {
                   </a>
 
                   <a
+                    href={PROFILE_DATA.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-300 dark:border-zinc-700 hover:border-zinc-900 dark:hover:border-zinc-300 text-zinc-800 dark:text-zinc-200 text-xs sm:text-sm font-medium transition-all duration-200 hover:-translate-y-0.5"
+                  >
+                    <span>Instagram</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+
+                  <a
                     href={PROFILE_DATA.resumePdfUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -589,20 +607,6 @@ export default function PortfolioHomePage() {
                         height={400}
                         className="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500"
                       />
-                      {/* Subtle Kinetic Radar Scan Line inside Portrait */}
-                      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-transparent via-emerald-400/10 to-transparent animate-scan-sweep" />
-
-                      {/* Live Security Telemetry Pill inside Corner */}
-                      <div className="absolute bottom-2.5 left-2.5 right-2.5 px-2.5 py-1.5 rounded-lg bg-zinc-950/75 backdrop-blur-md border border-white/10 flex items-center justify-between text-[10px] font-mono text-zinc-200">
-                        <span className="inline-flex items-center gap-1.5">
-                          <Shield className="w-3 h-3 text-emerald-400" />
-                          ZERO-TRUST PAM
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-emerald-400">
-                          <Activity className="w-3 h-3 animate-pulse" />
-                          VERIFIED
-                        </span>
-                      </div>
                     </div>
 
                     {/* Clean Executive Profile Metadata */}
@@ -1186,6 +1190,19 @@ export default function PortfolioHomePage() {
                     </div>
 
                     <div className="flex items-center justify-between py-3 border-b border-zinc-200 dark:border-zinc-800">
+                      <span className="text-zinc-500 dark:text-zinc-400">Instagram</span>
+                      <a
+                        href={PROFILE_DATA.instagramUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-zinc-900 dark:text-zinc-100 hover:underline inline-flex items-center gap-1"
+                      >
+                        <span>{PROFILE_DATA.instagramHandle}</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+
+                    <div className="flex items-center justify-between py-3 border-b border-zinc-200 dark:border-zinc-800">
                       <span className="text-zinc-500 dark:text-zinc-400">Email</span>
                       <a
                         href={`mailto:${PROFILE_DATA.email}`}
@@ -1352,6 +1369,14 @@ export default function PortfolioHomePage() {
                 className="hover:text-zinc-900 dark:hover:text-zinc-100 transition"
               >
                 LinkedIn
+              </a>
+              <a
+                href={PROFILE_DATA.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-zinc-900 dark:hover:text-zinc-100 transition"
+              >
+                Instagram
               </a>
               <a
                 href={PROFILE_DATA.githubUrl}
