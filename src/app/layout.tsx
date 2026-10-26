@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "Indonesia",
   ],
   authors: [{ name: "Ksatria Dharma Aldzikri" }],
+  icons: {
+    icon: "/images/ksatria-profile.jpg",
+    shortcut: "/images/ksatria-profile.jpg",
+    apple: "/images/ksatria-profile.jpg",
+  },
   openGraph: {
     title: "Ksatria Dharma Aldzikri — Senior IT Cyber Security & Technical Product Specialist",
     description:

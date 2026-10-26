@@ -157,23 +157,25 @@ export default function PortfolioHomePage() {
         {/* ================= TOP NAVIGATION ================= */}
         <header className="sticky top-0 z-40 bg-[#FAF9F6]/90 dark:bg-[#0B0C0E]/90 backdrop-blur-md border-b border-zinc-200/80 dark:border-zinc-800/80">
           <div className="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between gap-4">
-            {/* Name & Subtle Role */}
-            <a href="#top" className="flex items-center gap-3 group">
-              <span className="w-8 h-8 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 flex items-center justify-center text-xs font-semibold tracking-tight">
-                KD
-              </span>
+            {/* Avatar Photo Icon & Name */}
+            <a href="#top" className="flex items-center gap-3 group shrink-0">
+              <img
+                src={PROFILE_DATA.profilePhoto}
+                alt="Ksatria Dharma Aldzikri"
+                className="w-9 h-9 rounded-full object-cover object-center border border-zinc-300 dark:border-zinc-700 shadow-sm shrink-0"
+              />
               <div className="flex flex-col">
-                <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+                <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 whitespace-nowrap">
                   Ksatria Dharma Aldzikri
                 </span>
-                <span className="text-[11px] text-zinc-500 dark:text-zinc-400 hidden sm:inline">
+                <span className="text-[11px] text-zinc-500 dark:text-zinc-400 hidden sm:inline whitespace-nowrap">
                   Cyber Security Engineer · Technical Product Specialist
                 </span>
               </div>
             </a>
 
             {/* Desktop Nav Links */}
-            <nav className="hidden md:flex items-center gap-7 text-xs font-medium text-zinc-600 dark:text-zinc-400">
+            <nav className="hidden lg:flex items-center gap-6 text-xs font-medium text-zinc-600 dark:text-zinc-400 whitespace-nowrap">
               <a
                 href="#capabilities"
                 className="hover:text-zinc-950 dark:hover:text-white transition"
@@ -202,7 +204,7 @@ export default function PortfolioHomePage() {
                 href="#background"
                 className="hover:text-zinc-950 dark:hover:text-white transition"
               >
-                {lang === "id" ? "Pendidikan & SAR" : "Background"}
+                {lang === "id" ? "Pendidikan" : "Education"}
               </a>
               <a
                 href="#contact"
@@ -213,7 +215,7 @@ export default function PortfolioHomePage() {
             </nav>
 
             {/* Right Controls */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 shrink-0">
               {/* Language Toggle */}
               <div className="inline-flex items-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-0.5 text-[11px] font-medium">
                 <button
@@ -256,17 +258,17 @@ export default function PortfolioHomePage() {
                 href={PROFILE_DATA.resumePdfUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-medium transition"
+                className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-white text-white dark:text-zinc-900 text-xs font-medium whitespace-nowrap transition"
               >
                 <span>Resume PDF</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
               </a>
 
               {/* Mobile Menu Button */}
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300"
+                className="lg:hidden p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300"
                 aria-label="Menu"
               >
                 {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -276,7 +278,7 @@ export default function PortfolioHomePage() {
 
           {/* Mobile Navigation Drawer */}
           {mobileMenuOpen && (
-            <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-[#FAF9F6] dark:bg-[#0B0C0E] px-5 py-4 space-y-3 text-sm">
+            <div className="lg:hidden border-t border-zinc-200 dark:border-zinc-800 bg-[#FAF9F6] dark:bg-[#0B0C0E] px-5 py-4 space-y-3 text-sm">
               <div className="flex flex-col space-y-2.5 text-zinc-700 dark:text-zinc-300 font-medium">
                 <a href="#capabilities" onClick={() => setMobileMenuOpen(false)}>
                   01 / {lang === "id" ? "Keahlian & Spesialisasi" : "Expertise"}
@@ -291,7 +293,7 @@ export default function PortfolioHomePage() {
                   04 / {lang === "id" ? "Lisensi & Sertifikasi (18)" : "Certifications (18)"}
                 </a>
                 <a href="#background" onClick={() => setMobileMenuOpen(false)}>
-                  05 / {lang === "id" ? "Pendidikan & Dedikasi" : "Background"}
+                  05 / {lang === "id" ? "Pendidikan" : "Education"}
                 </a>
                 <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
                   06 / {lang === "id" ? "Kontak" : "Contact"}
@@ -884,7 +886,7 @@ export default function PortfolioHomePage() {
             </div>
           </section>
 
-          {/* ================= 05 / PENDIDIKAN & KEPEMIMPINAN LAPANGAN (SAR) ================= */}
+          {/* ================= 05 / PENDIDIKAN ================= */}
           <section
             id="background"
             className="py-16 sm:py-24 border-b border-zinc-200 dark:border-zinc-800/90 scroll-mt-16"
@@ -893,77 +895,42 @@ export default function PortfolioHomePage() {
               {/* Left Header */}
               <div className="lg:col-span-4 space-y-3">
                 <p className="text-xs font-mono uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
-                  05 / {lang === "id" ? "Pendidikan & Dedikasi" : "Education & Leadership"}
+                  05 / {lang === "id" ? "Pendidikan" : "Education"}
                 </p>
                 <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
                   {lang === "id"
-                    ? "Akademik, Kepemimpinan & Operasi SAR"
-                    : "Academic Background & Emergency Rescue"}
+                    ? "Latar Belakang Akademik"
+                    : "Academic Background"}
                 </h2>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                   {lang === "id"
-                    ? "Pendidikan tinggi di bidang Keamanan Sistem Informasi serta dedikasi aktif dalam operasi kemanusiaan tanggap darurat (SAR) dan pemanduan gunung profesional (APGI)."
-                    : "Higher education in Computer & Information Systems Security alongside active dedication in emergency search-and-rescue (SAR) and certified mountain guiding (APGI)."}
+                    ? "Pendidikan formal di bidang Teknologi Informasi serta Keamanan Sistem Informasi (Computer & Information Systems Security)."
+                    : "Formal academic education in Information Technology and Computer & Information Systems Security."}
                 </p>
               </div>
 
-              {/* Right Content */}
-              <div className="lg:col-span-8 space-y-12">
-                {/* Academic Education */}
-                <div className="space-y-4">
-                  <h3 className="text-xs font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
-                    {lang === "id" ? "Pendidikan Formal" : "Academic Education"}
-                  </h3>
-                  <div className="divide-y divide-zinc-200 dark:divide-zinc-800/90 border-t border-b border-zinc-200 dark:border-zinc-800/90">
-                    {EDUCATION_DATA.map((edu) => (
-                      <div key={edu.institution} className="py-5 space-y-1.5">
-                        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-                          <h4 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
-                            {edu.institution}
-                          </h4>
-                          <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
-                            {edu.period}
-                          </span>
-                        </div>
-                        <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                          {edu.degree[lang]} ·{" "}
-                          <span className="text-zinc-500 font-normal">{edu.location}</span>
-                        </p>
-                        <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed pt-1">
-                          {edu.description[lang]}
-                        </p>
+              {/* Right Content: Academic Education */}
+              <div className="lg:col-span-8">
+                <div className="divide-y divide-zinc-200 dark:divide-zinc-800/90 border-t border-b border-zinc-200 dark:border-zinc-800/90">
+                  {EDUCATION_DATA.map((edu) => (
+                    <div key={edu.institution} className="py-6 space-y-2">
+                      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                        <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                          {edu.institution}
+                        </h3>
+                        <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
+                          {edu.period}
+                        </span>
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Leadership & SAR */}
-                <div className="space-y-4">
-                  <h3 className="text-xs font-mono uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
-                    {lang === "id"
-                      ? "Kepemimpinan Organisasi, Operasi SAR & Keanggotaan APGI"
-                      : "Leadership, Search-and-Rescue (SAR) & APGI Membership"}
-                  </h3>
-                  <div className="divide-y divide-zinc-200 dark:divide-zinc-800/90 border-t border-b border-zinc-200 dark:border-zinc-800/90">
-                    {LEADERSHIP_AND_SAR_DATA.map((item, idx) => (
-                      <div key={idx} className="py-5 space-y-1.5">
-                        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-                          <h4 className="text-sm sm:text-base font-semibold text-zinc-900 dark:text-zinc-100">
-                            {item.role[lang]}
-                          </h4>
-                          <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400 shrink-0">
-                            {item.period}
-                          </span>
-                        </div>
-                        <p className="text-xs font-medium text-zinc-700 dark:text-zinc-300">
-                          {item.org}
-                        </p>
-                        <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed pt-1">
-                          {item.highlight[lang]}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                      <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                        {edu.degree[lang]} ·{" "}
+                        <span className="text-zinc-500 font-normal">{edu.location}</span>
+                      </p>
+                      <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed pt-1">
+                        {edu.description[lang]}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
