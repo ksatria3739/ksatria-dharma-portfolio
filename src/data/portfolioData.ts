@@ -32,23 +32,10 @@ export interface CertificationItem {
   issuer: string;
   date: string;
   credentialId?: string;
-  category: "Security & PAM" | "Firewall & Endpoint" | "Cloud & Backup" | "Software & SAR";
+  category: "Fortinet & ISC2" | "Segura® PAM" | "Sophos" | "Google, ICSI & Acronis";
   pdfUrl?: string;
   verified: boolean;
   description: { en: string; id: string };
-}
-
-export interface SkillGroup {
-  id: string;
-  title: { en: string; id: string };
-  subtitle: { en: string; id: string };
-  iconName: string;
-  accent: "cyan" | "emerald" | "amber" | "blue";
-  skills: {
-    name: string;
-    level: number;
-    tag: string;
-  }[];
 }
 
 export const PROFILE_DATA = {
@@ -56,16 +43,16 @@ export const PROFILE_DATA = {
   shortName: "Ksatria D. Aldzikri",
   handle: "ksatria@sec-ops",
   title: {
-    en: "Senior IT Cyber Security | Senior Technical Product Specialist | Full-Stack Web Developer",
-    id: "Senior IT Cyber Security | Senior Technical Product Specialist | Full-Stack Web Developer",
+    en: "Cyber Security Engineer | Senior Technical Product Specialist | Full-Stack Web Developer",
+    id: "Cyber Security Engineer | Senior Technical Product Specialist | Full-Stack Web Developer",
   },
   tagline: {
-    en: "Architecting Zero-Downtime Privileged Access Management (PAM), Enterprise Backup & XDR Frameworks, and High-Integrity Full-Stack Web Systems.",
-    id: "Merancang Arsitektur Privileged Access Management (PAM) Zero-Downtime, Infrastruktur Backup & XDR Korporasi, serta Sistem Web Full-Stack Berintegritas Tinggi.",
+    en: "Securing Digital Infrastructure & Cloud Solutions through Privileged Access Management (PAM), Enterprise Backup & XDR, Perimeter Firewall Defense, and Resilient Web Systems.",
+    id: "Mengamankan Infrastruktur Digital & Solusi Cloud melalui Privileged Access Management (PAM), Backup & XDR Korporasi, Pertahanan Firewall Perimeter, dan Sistem Web Berintegritas Tinggi.",
   },
   summary: {
-    en: "Experienced Information Technology professional specializing in Cyber Security, Web Development, and Enterprise Infrastructure Management. Proven track record in designing, deploying, and maintaining advanced security solutions—including Privileged Access Management (Segura PAM), Next-Gen Firewall & Endpoint Protection (Sophos), and Disaster Recovery systems (Acronis Cyber Protect, XDR, DLP). Adept at leading end-to-end technical projects, executing Proof of Concepts (POC), and delivering advanced troubleshooting to safeguard critical enterprise assets.",
-    id: "Profesional Teknologi Informasi berpengalaman dengan spesialisasi di bidang Cyber Security, Web Development, dan Manajemen Infrastruktur Enterprise. Memiliki rekam jejak teruji dalam merancang, mengimplementasikan, dan mengelola solusi keamanan tingkat lanjut—termasuk Privileged Access Management (Segura PAM), Proteksi Firewall & Endpoint (Sophos), serta sistem Backup & Disaster Recovery (Acronis Cyber Protect, XDR, DLP). Ahli dalam memimpin siklus proyek teknis end-to-end, eksekusi Proof of Concept (POC), serta diagnostik sistem zero-downtime.",
+    en: "With over 5 years of hands-on experience in cybersecurity engineering, web development, and enterprise operations, I specialize in transforming complex security challenges into robust, scalable defenses. Currently serving as a Senior Technical Product Specialist / Security Product Engineer at PT. Optima Solusindo Informatika, I drive the end-to-end technical lifecycle—from solution design, Proof of Concept (POC) execution, and deployment (Segura PAM, Acronis Data Protection & DR, Sophos, Fortinet, SIEM, XDR/DLP) to post-deployment L3 incident remediation and ISO 27001 compliance alignment.",
+    id: "Dengan pengalaman lebih dari 5 tahun di bidang rekayasa keamanan siber (Cyber Security Engineering), pengembangan web, dan operasional infrastruktur, saya berfokus mentransformasikan tantangan keamanan yang kompleks menjadi pertahanan enterprise yang tangguh. Saat ini sebagai Senior Technical Product Specialist / Security Product Engineer di PT. Optima Solusindo Informatika, saya memimpin siklus teknis end-to-end—mulai dari perancangan arsitektur, eksekusi Proof of Concept (POC), implementasi produksi (Segura PAM, Acronis Backup & DR, Sophos, Fortinet, SIEM, XDR/DLP), hingga remediasi insiden SOC/L3 dan kepatuhan standar ISO 27001.",
   },
   location: "South Tangerang, Banten, Indonesia",
   email: "Ksatriadharmaaldzikri@gmail.com",
@@ -75,213 +62,83 @@ export const PROFILE_DATA = {
   linkedinUrl: "https://www.linkedin.com/in/ksatria-dharma-aldzikri-ab60522a4/",
   linkedinSlug: "in/ksatria-dharma-aldzikri-ab60522a4",
   githubUrl: "https://github.com/Ksatria3739",
-  profilePhoto: "/images/ksatria-profile.jpg",
+  profilePhoto: "/images/ksatria-profile.jpg?v=800hd",
   bannerPhoto: "/images/ksatria-banner.jpg",
   resumePdfUrl: "/resume/ATS-Resume-Ksatria-Dharma-Aldzikri.pdf",
   apgiId: "APGI.B26-03084",
 };
 
-export const METRICS_DATA = [
-  {
-    value: "99.99%",
-    label: {
-      en: "Zero-Downtime PAM & DR Target",
-      id: "Target Uptime PAM & Disaster Recovery",
-    },
-    detail: {
-      en: "High-availability enterprise access & backup",
-      id: "Akses sekuriti & backup korporasi ketersediaan tinggi",
-    },
-  },
-  {
-    value: "5+ Yrs",
-    label: {
-      en: "IT Security & Web Engineering",
-      id: "Pengalaman IT Security & Web Dev",
-    },
-    detail: {
-      en: "Active career track since 2019",
-      id: "Rekam jejak profesional sejak 2019",
-    },
-  },
-  {
-    value: "10+",
-    label: {
-      en: "Enterprise & Full-Stack Deployments",
-      id: "Implementasi Enterprise & Web",
-    },
-    detail: {
-      en: "MSIG Life, Bayer, Sucofindo, Socare & more",
-      id: "MSIG Life, Bayer, Sucofindo, Socare, dll.",
-    },
-  },
-  {
-    value: "10+",
-    label: {
-      en: "Global & National Certifications",
-      id: "Sertifikasi Global & Nasional",
-    },
-    detail: {
-      en: "Sophos, Segura PAM, Acronis, Cyble, ICSI, APGI",
-      id: "Sophos, Segura PAM, Acronis, Cyble, ICSI, APGI",
-    },
-  },
-];
-
-export const SKILL_GROUPS: SkillGroup[] = [
-  {
-    id: "cyber-pam",
-    title: {
-      en: "Cybersecurity & Zero-Trust PAM",
-      id: "Cybersecurity & Zero-Trust PAM",
-    },
-    subtitle: {
-      en: "Privileged Access, Threat Intelligence & Perimeter Defense",
-      id: "Manajemen Akses Istimewa, Threat Intelligence & Pertahanan Jaringan",
-    },
-    iconName: "ShieldCheck",
-    accent: "cyan",
-    skills: [
-      { name: "Privileged Access Management (Segura / Senhasegura)", level: 98, tag: "PAM Core" },
-      { name: "Principle of Least Privilege (PoLP) & Vaulting", level: 96, tag: "Zero-Trust" },
-      { name: "Sophos Firewall Engineer (v22.0) & Endpoint (v7.0)", level: 95, tag: "Network Sec" },
-      { name: "Cyber Threat Intelligence (Cyble) & Malware Analysis", level: 92, tag: "CTI / SOC" },
-      { name: "Cloud Security & Operational Technology (OT) Security", level: 90, tag: "Cloud / OT" },
-    ],
-  },
-  {
-    id: "infra-backup",
-    title: {
-      en: "Backup, XDR, DLP & Infrastructure",
-      id: "Backup, XDR, DLP & Infrastruktur IT",
-    },
-    subtitle: {
-      en: "Data Protection, Disaster Recovery & Enterprise Resilience",
-      id: "Proteksi Data, Pemulihan Bencana & Ketahanan Infrastruktur",
-    },
-    iconName: "Server",
-    accent: "emerald",
-    skills: [
-      { name: "Acronis Cyber Protect (On-Premises & Cloud DR)", level: 98, tag: "Backup / DR" },
-      { name: "Extended Detection & Response (XDR) & DLP Protocols", level: 95, tag: "XDR / DLP" },
-      { name: "Microsoft 365 Automated Backup Architecture", level: 94, tag: "Cloud Backup" },
-      { name: "Network Engineering, SSL VPN & Synology NAS Protection", level: 92, tag: "Infra / VPN" },
-      { name: "Disaster Recovery Simulation & Integrity Validation", level: 95, tag: "DR Testing" },
-    ],
-  },
-  {
-    id: "fullstack-web",
-    title: {
-      en: "Full-Stack Web Engineering",
-      id: "Pengembangan Web Full-Stack",
-    },
-    subtitle: {
-      en: "Modern Web Applications, Fintech Gateways & Scalable APIs",
-      id: "Aplikasi Web Modern, Integrasi Payment Gateway & RESTful API",
-    },
-    iconName: "Code2",
-    accent: "blue",
-    skills: [
-      { name: "Next.js 15 (App Router), React 19 & TypeScript", level: 94, tag: "Frontend / SSR" },
-      { name: "Laravel 11/12 (PHP 8.2), Sanctum & Multi-Role RBAC", level: 95, tag: "Backend API" },
-      { name: "Vue.js 3 (Vite, Pinia) & Tailwind CSS Architecture", level: 93, tag: "Reactive UI" },
-      { name: "MySQL 8 / PostgreSQL (Prisma ORM) & Atomic Locking", level: 92, tag: "Database" },
-      { name: "Fintech Payment Gateways (Midtrans, Xendit, Tripay QRIS)", level: 95, tag: "Fintech" },
-    ],
-  },
-  {
-    id: "presales-rescue",
-    title: {
-      en: "Technical Pre-Sales, POC & Tactical SAR",
-      id: "Technical Pre-Sales, POC & Kepemimpinan SAR",
-    },
-    subtitle: {
-      en: "Solution Delivery, Executive Demos & High-Pressure Crisis Response",
-      id: "Solusi End-to-End, Eksekusi POC & Tanggap Darurat Lapangan",
-    },
-    iconName: "Compass",
-    accent: "amber",
-    skills: [
-      { name: "Tailored Proof of Concept (POC) Design & Execution", level: 98, tag: "Pre-Sales" },
-      { name: "End-to-End Enterprise Project Lifecycle Delivery", level: 96, tag: "Project Lead" },
-      { name: "Executive Product Demos & Security Architecture Consultation", level: 95, tag: "Consultation" },
-      { name: "System Diagnostics & Zero-Downtime Troubleshooting", level: 96, tag: "L3 Support" },
-      { name: "Emergency Search & Rescue (SAR), Survival & IMPK Navigation", level: 95, tag: "APGI / SAR" },
-    ],
-  },
-];
-
 export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     id: "optima",
     role: {
-      en: "Senior Technical Product Specialist (Cyber Security & PAM)",
-      id: "Senior Technical Product Specialist (Cyber Security & PAM)",
+      en: "Senior Technical Product Specialist / Security Product Engineer",
+      id: "Senior Technical Product Specialist / Security Product Engineer",
     },
     company: "PT. Optima Solusindo Informatika",
-    period: "2024 – Present",
-    location: "Jakarta / South Tangerang, Indonesia",
+    period: "Feb 2024 – Present",
+    location: "DKI Jakarta & South Tangerang, Indonesia",
     type: {
-      en: "Enterprise Cyber Security & Infrastructure",
-      id: "Keamanan Siber & Infrastruktur Korporasi",
+      en: "Enterprise Cyber Security, PAM & Cloud Infrastructure",
+      id: "Keamanan Siber Korporasi, PAM & Infrastruktur Cloud",
     },
     highlights: {
       en: [
-        "Spearheaded the end-to-end design, deployment, and administration of Privileged Access Management (PAM) solutions utilizing the Segura (Senhasegura) platform to secure critical organizational assets and infrastructure.",
-        "Managed the complete technical lifecycle of cybersecurity and infrastructure projects—from initial client consultation and requirements gathering to final production deployment and ongoing maintenance.",
-        "Led client-facing technical meetings and delivered comprehensive executive product demonstrations to articulate the value and functionality of proposed security architectures.",
-        "Delivered advanced L3 technical support for PAM, XDR, and Backup incidents, resolving complex integration issues and optimizing system performance to ensure zero-downtime secure access.",
-        "Designed and executed tailored Proof of Concepts (POCs) in prospective enterprise environments (including MSIG Life, Bayer Indonesia, Sucofindo, Arasis Awan Teknologi, and Sinar Alum Sarana).",
+        "Spearheaded the end-to-end design, deployment, and administration of Privileged Access Management (PAM) solutions utilizing the Segura (Senhasegura) platform to protect critical enterprise assets.",
+        "Managed the complete technical lifecycle of cybersecurity and unified Data Protection & Disaster Recovery projects (Acronis, XDR, DLP, SIEM, Sophos, Fortinet) from initial client consultation to production deployment.",
+        "Acted as the internal security anchor managing SOC L1/L3 escalations—actively validating threats, blocking malicious IPs, neutralizing brute-force attacks, and fine-tuning firewall and WAF rules.",
+        "Partnered with IT infrastructure, governance teams, and external auditors to align technical security controls with ISO 27001 compliance frameworks.",
+        "Designed and executed tailored Proof of Concepts (POCs) across major enterprise environments including PT. MSIG Life, PT. Bayer Indonesia, PT. Sucofindo, PT. Arasis Awan Teknologi, and PT. Sinar Alum Sarana.",
       ],
       id: [
-        "Memimpin perancangan, implementasi, dan administrasi end-to-end solusi Privileged Access Management (PAM) menggunakan platform Segura (Senhasegura) untuk mengamankan aset dan infrastruktur kritis perusahaan.",
-        "Mengelola siklus hidup teknis proyek keamanan siber dan infrastruktur secara menyeluruh—mulai dari konsultasi awal klien, analisis kebutuhan, hingga deployment produksi dan pemeliharaan berkelanjutan.",
-        "Memimpin pertemuan teknis dengan klien korporasi serta menyajikan demonstrasi produk komprehensif untuk menjelaskan arsitektur keamanan yang diusulkan.",
-        "Memberikan dukungan teknis tingkat lanjut (Advanced Troubleshooting) untuk insiden terkait PAM dan backup guna memastikan akses aman tanpa waktu henti (zero-downtime).",
-        "Merancang dan mengeksekusi Proof of Concept (POC) yang disesuaikan pada lingkungan klien korporasi (termasuk PT. MSIG Life, PT. Bayer Indonesia, PT. Sucofindo, PT. Arasis Awan Teknologi, dan PT. Sinar Alum Sarana).",
+        "Memimpin perancangan, deployment, dan administrasi end-to-end solusi Privileged Access Management (PAM) menggunakan platform Segura (Senhasegura) untuk mengamankan aset kritis organisasi.",
+        "Mengelola siklus hidup teknis proyek keamanan siber serta Data Protection & Disaster Recovery terpadu (Acronis, XDR, DLP, SIEM, Sophos, Fortinet) mulai dari konsultasi awal hingga implementasi produksi.",
+        "Berperan sebagai jangkar keamanan operasional yang menangani eskalasi insiden SOC—memvalidasi ancaman secara aktif, memblokir IP berbahaya, menetralisir serangan brute-force, serta menyempurnakan aturan Firewall dan WAF.",
+        "Bermitra dengan tim infrastruktur IT, tata kelola (governance), dan auditor eksternal untuk memastikan kepatuhan kontrol keamanan terhadap standar ISO 27001.",
+        "Merancang dan mengeksekusi Proof of Concept (POC) di berbagai lingkungan klien korporasi seperti PT. MSIG Life, PT. Bayer Indonesia, PT. Sucofindo, PT. Arasis Awan Teknologi, dan PT. Sinar Alum Sarana.",
       ],
     },
     tags: [
       "Segura PAM (Senhasegura)",
-      "Acronis Cyber Protect",
-      "Sophos Firewall & Endpoint",
-      "XDR & DLP",
+      "Identity & Access Management (IAM)",
+      "Acronis Cyber Protect & DR",
+      "Sophos & Fortinet Firewall",
+      "XDR, DLP & SIEM",
+      "ISO 27001 Compliance",
       "Technical Pre-Sales & POC",
-      "Zero-Trust PoLP",
     ],
   },
   {
     id: "bhayangkara",
     role: {
-      en: "Full-Stack Web Developer",
-      id: "Full-Stack Web Developer",
+      en: "Cyber Security Engineer & Web Developer",
+      id: "Cyber Security Engineer & Web Developer",
     },
     company: "PT. Bhayangkara Indonesia Bersatu",
-    period: "2022 – 2024",
-    location: "Indonesia",
+    period: "2020 – 2024",
+    location: "South Tangerang, Banten, Indonesia",
     type: {
-      en: "Web Application & Digital Platform Engineering",
-      id: "Pengembangan Aplikasi Web & Platform Digital",
+      en: "Network Security Hardening & Web Platform Engineering",
+      id: "Perkuatan Keamanan Jaringan & Pengembangan Platform Web",
     },
     highlights: {
       en: [
-        "Developed and maintained responsive, high-traffic web applications and structured digital portals, ensuring optimal performance, mobile readiness, and seamless user experience.",
-        "Collaborated closely with cross-functional internal teams to architect digital solutions aligned with organizational goals and security best practices.",
-        "Optimized front-end rendering, CMS workflows, and database queries to maintain high availability and fast page load speeds.",
+        "Implemented system security hardening best practices and configured network security controls, resulting in a 76% decrease in security incidents.",
+        "Developed and led an internal security awareness program that improved employee security readiness and reduced human-factor security incidents by 80%.",
+        "Developed and maintained responsive web applications and digital portals, ensuring optimal performance, data protection, and seamless user experience.",
       ],
       id: [
-        "Mengembangkan dan memelihara aplikasi web responsif berkinerja tinggi serta portal digital terstruktur dengan fokus pada performa optimal dan pengalaman pengguna (UX).",
-        "Berkolaborasi dengan tim internal lintas divisi untuk merancang solusi digital yang selaras dengan target strategis organisasi dan standar keamanan.",
-        "Mengoptimalkan arsitektur front-end, manajemen konten (CMS), dan kueri database untuk menjaga reliabilitas serta kecepatan akses.",
+        "Mengimplementasikan perkuatan keamanan sistem (system hardening) dan konfigurasi keamanan jaringan yang berhasil menurunkan insiden keamanan sebesar 76%.",
+        "Mengembangkan program kesadaran keamanan siber (security awareness) internal yang meningkatkan kesiapan personel dan menekan risiko insiden hingga 80%.",
+        "Mengembangkan dan memelihara aplikasi web responsif serta portal digital terstruktur dengan performa dan keamanan data yang optimal.",
       ],
     },
     tags: [
-      "Web Development",
-      "Responsive UI/UX",
-      "PHP / Laravel",
-      "JavaScript / TypeScript",
-      "Performance Optimization",
-      "Database Management",
+      "Cyber Security Engineering",
+      "Network Security Hardening",
+      "Security Awareness",
+      "Full-Stack Web Development",
+      "Incident Reduction",
     ],
   },
   {
@@ -290,29 +147,29 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
       en: "Web Developer",
       id: "Web Developer",
     },
-    company: "PT. Bharindo Indonesia Banten",
-    period: "2019 – 2022",
-    location: "Banten, Indonesia",
+    company: "PT. Bharindo Indonesia Bersatu / Banten",
+    period: "2019 – 2023",
+    location: "South Tangerang, Banten, Indonesia",
     type: {
       en: "Web Platform Development & System Reliability",
       id: "Pengembangan Platform Web & Reliabilitas Sistem",
     },
     highlights: {
       en: [
-        "Built and optimized web-based platforms from the ground up, focusing on clean code architecture, security hardening, and long-term system reliability.",
-        "Maintained server configurations, backup routines, and front-end styling for corporate digital assets.",
+        "Built and optimized web-based platforms focusing on clean code architecture, security hardening, and long-term system reliability.",
+        "Developed custom RESTful APIs and third-party system integrations (including earlier backend & CMS engineering roles at CV. Dwi Rent Car and PT. Maustudy Indonesia) to automate data exchange and reduce latency.",
       ],
       id: [
-        "Membangun dan mengoptimalkan platform berbasis web dengan berfokus pada arsitektur clean code, keamanan aplikasi, serta keandalan sistem jangka panjang.",
-        "Mengelola konfigurasi server, rutinitas backup, serta pengembangan antarmuka web korporasi.",
+        "Membangun dan mengoptimalkan platform berbasis web dengan fokus pada arsitektur clean code, perkuatan keamanan aplikasi, dan keandalan sistem.",
+        "Mengembangkan RESTful API kustom dan integrasi sistem pihak ketiga (termasuk rekam jejak awal sebagai Back End & WordPress Developer di CV. Dwi Rent Car dan PT. Maustudy Indonesia) untuk mengotomatisasi pertukaran data.",
       ],
     },
     tags: [
+      "RESTful API Engineering",
+      "Full-Stack Web Development",
       "Clean Code Architecture",
-      "Full-Stack Web",
-      "System Reliability",
-      "Server Administration",
-      "Frontend & Backend",
+      "Database Optimization",
+      "System Integration",
     ],
   },
 ];
@@ -522,8 +379,8 @@ export const PROJECTS_DATA: ProjectItem[] = [
     year: "2026",
     category: "fullstack",
     badge: {
-      en: "Full-Stack Next.js 15 & Fintech Security",
-      id: "Full-Stack Next.js 15 & Keamanan Fintech",
+      en: "Next.js 15 & Fintech Security",
+      id: "Next.js 15 & Keamanan Fintech",
     },
     summary: {
       en: "Built an enterprise Smart Invoicing, Payment Link Generator (3D Secure 2.0 Credit Card & Virtual Account), and KYB-compliant Corporate Storefront with SHA-256 cryptographic invoice tokens.",
@@ -552,7 +409,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       },
     },
     technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Prisma ORM", "SHA-256 Security", "3DS 2.0 & Payment Gateway"],
-    status: "Vercel Ready",
+    status: "Production Ready",
   },
   {
     id: "rumah-tani-marketplace",
@@ -635,12 +492,96 @@ export const PROJECTS_DATA: ProjectItem[] = [
 ];
 
 export const CERTIFICATIONS_DATA: CertificationItem[] = [
+  // Fortinet & ISC2
+  {
+    id: "fortinet-nse-3",
+    title: "Fortinet NSE 3 Certified in Cybersecurity",
+    issuer: "Fortinet Training Institute",
+    date: "Oct 2026 – Oct 2028",
+    credentialId: "6997901603KD",
+    category: "Fortinet & ISC2",
+    pdfUrl: "/certificates/Fortinet-NSE-3-Ksatria.pdf",
+    verified: true,
+    description: {
+      en: "Advanced product & zero-trust network security architecture certification verified by Fortinet Training Institute.",
+      id: "Sertifikasi tingkat lanjut arsitektur keamanan jaringan dan produk Fortinet (Valid s/d Oktober 2028).",
+    },
+  },
+  {
+    id: "fortinet-nse-2",
+    title: "Fortinet NSE 2 Certified in Cybersecurity",
+    issuer: "Fortinet Training Institute",
+    date: "Oct 2026 – Oct 2028",
+    credentialId: "0938591219KD",
+    category: "Fortinet & ISC2",
+    pdfUrl: "/certificates/Fortinet-NSE-2-Ksatria.pdf",
+    verified: true,
+    description: {
+      en: "Evolution of cybersecurity, core security solutions (Firewall, SIEM, SOAR, Zero-Trust, Cloud Security) certified by Fortinet.",
+      id: "Sertifikasi arsitektur pertahanan siber inti (Firewall, SIEM, SOAR, Zero-Trust & Cloud Security) oleh Fortinet.",
+    },
+  },
+  {
+    id: "fortinet-nse-1",
+    title: "Fortinet NSE 1 Certified in Cybersecurity",
+    issuer: "Fortinet Training Institute",
+    date: "Oct 2026 – Oct 2028",
+    credentialId: "1081529479KD",
+    category: "Fortinet & ISC2",
+    pdfUrl: "/certificates/Fortinet-NSE-1-Ksatria.pdf",
+    verified: true,
+    description: {
+      en: "Threat landscape fundamentals, attack surface analysis, and enterprise cybersecurity governance.",
+      id: "Sertifikasi lanskap ancaman siber, analisis permukaan serangan, dan tata kelola keamanan informasi.",
+    },
+  },
+  {
+    id: "fortios-8-isc2",
+    title: "FortiOS 8.0 Administrator (ISC2 CISSP CPE — Security Operations)",
+    issuer: "Fortinet Training Institute & ISC2",
+    date: "Oct 2026 (13 CPE Hours)",
+    category: "Fortinet & ISC2",
+    pdfUrl: "/certificates/Fortinet-FortiOS-8.0-ISC2-Ksatria.pdf",
+    verified: true,
+    description: {
+      en: "Official ISC2 Continuing Professional Education (CPE) completion for FortiOS 8.0 Administrator in the CISSP Security Operations domain.",
+      id: "Penyelesaian resmi program FortiOS 8.0 Administrator yang diakui oleh ISC2 pada domain CISSP Security Operations (13 Jam Kredit).",
+    },
+  },
+  {
+    id: "fortigate-76-operator",
+    title: "FortiGate 7.6 Operator",
+    issuer: "Fortinet Training Institute",
+    date: "Oct 2026",
+    category: "Fortinet & ISC2",
+    pdfUrl: "/certificates/Fortinet-FortiGate-7.6-Operator-Ksatria.pdf",
+    verified: true,
+    description: {
+      en: "Hands-on operational configuration of FortiGate 7.6 Next-Generation Firewall policies, VPN, SD-WAN, and security profiles.",
+      id: "Pengoperasian dan konfigurasi teknis FortiGate 7.6 Next-Generation Firewall, kebijakan keamanan, VPN, dan SD-WAN.",
+    },
+  },
+  {
+    id: "fortinet-cloud-fundamentals",
+    title: "Cybersecurity and Cloud Fundamentals 1.0",
+    issuer: "Fortinet Training Institute",
+    date: "Oct 2026",
+    category: "Fortinet & ISC2",
+    pdfUrl: "/certificates/Fortinet-Cybersecurity-Cloud-Fundamentals-Ksatria.pdf",
+    verified: true,
+    description: {
+      en: "Cloud security architecture, shared responsibility models, and securing multi-cloud enterprise workloads.",
+      id: "Arsitektur keamanan cloud, model tanggung jawab bersama, dan pengamanan beban kerja multi-cloud korporasi.",
+    },
+  },
+
+  // Sophos Academy
   {
     id: "sophos-firewall-v22",
     title: "ET80 - Sophos Firewall Engineer v22.0",
     issuer: "Sophos Academy",
-    date: "Jan 2026 – Dec 2027",
-    category: "Firewall & Endpoint",
+    date: "Oct 2026 – Dec 2027",
+    category: "Sophos",
     pdfUrl: "/certificates/Sophos-Firewall-Engineer-Ksatria.pdf",
     verified: true,
     description: {
@@ -652,27 +593,43 @@ export const CERTIFICATIONS_DATA: CertificationItem[] = [
     id: "sophos-endpoint-v7",
     title: "ET15 - Sophos Endpoint Engineer v7.0",
     issuer: "Sophos Academy",
-    date: "Jan 2026 – Sep 2028",
-    category: "Firewall & Endpoint",
+    date: "Oct 2026 – Sep 2028",
+    category: "Sophos",
     pdfUrl: "/certificates/Sophos-Endpoint-Engineer-Ksatria.pdf",
     verified: true,
     description: {
-      en: "Certified in enterprise endpoint protection, intercept X policies, threat mitigation, and Sophos Central administration.",
+      en: "Certified in enterprise endpoint protection, Intercept X policies, threat mitigation, and Sophos Central administration.",
       id: "Tersertifikasi dalam proteksi endpoint korporasi, kebijakan Intercept X, mitigasi ancaman, dan administrasi Sophos Central.",
     },
   },
+
+  // Segura University (PAM)
   {
     id: "segura-pam-core",
-    title: "Segura® PAM Core Specialist & Portfolio I",
+    title: "Segura® PAM Core Specialist (PAM Core Basic)",
     issuer: "Segura® University (Senhasegura)",
     date: "May 2026",
-    credentialId: "0d28-9aba-9257-309d",
-    category: "Security & PAM",
-    pdfUrl: "/certificates/Segura-Ready-to-Sell-Portfolio-I.pdf",
+    credentialId: "6a71-e03d-f512-ae32",
+    category: "Segura® PAM",
+    pdfUrl: "/certificates/Segura-PAM-Core-Specialist.pdf",
     verified: true,
     description: {
-      en: "Core Privileged Access Management specialist covering credential vaulting, PAM architecture, and Zero-Trust access governance.",
-      id: "Spesialis inti Privileged Access Management mencakup brankas kredensial, arsitektur PAM, dan tata kelola akses Zero-Trust.",
+      en: "Recognized Segura® PAM Core Specialist covering credential vaulting, privileged session management, and Zero-Trust access governance.",
+      id: "Diakui sebagai Segura® PAM Core Specialist dalam manajemen brankas kredensial, pemantauan sesi istimewa, dan tata kelola Zero-Trust.",
+    },
+  },
+  {
+    id: "segura-deployment",
+    title: "Segura® Deployment Specialist",
+    issuer: "Segura® University (Senhasegura)",
+    date: "May 2026",
+    credentialId: "a936-6046-30aa-3c66",
+    category: "Segura® PAM",
+    pdfUrl: "/certificates/Segura-Deployment-Specialist.pdf",
+    verified: true,
+    description: {
+      en: "Certified in end-to-end production deployment, cluster sizing, high availability, and architectural integration of Segura® PAM.",
+      id: "Tersertifikasi dalam deployment produksi end-to-end, konfigurasi high-availability, dan integrasi arsitektur Segura® PAM.",
     },
   },
   {
@@ -681,7 +638,7 @@ export const CERTIFICATIONS_DATA: CertificationItem[] = [
     issuer: "Segura® University (Senhasegura)",
     date: "May 2026",
     credentialId: "4380-6193-bb25-cc58",
-    category: "Security & PAM",
+    category: "Segura® PAM",
     pdfUrl: "/certificates/Segura-Ready-to-Sell-Portfolio-II.pdf",
     verified: true,
     description: {
@@ -690,51 +647,67 @@ export const CERTIFICATIONS_DATA: CertificationItem[] = [
     },
   },
   {
-    id: "icsi-cnss",
-    title: "ICSI | CNSS Certified Network Security Specialist",
-    issuer: "International CyberSecurity Institute (UK)",
-    date: "Verified Credential",
-    category: "Security & PAM",
+    id: "segura-portfolio-i",
+    title: "Segura® Ready to Sell – Portfolio I & Foundation",
+    issuer: "Segura® University (Senhasegura)",
+    date: "May 2026",
+    credentialId: "0d28-9aba-9257-309d",
+    category: "Segura® PAM",
+    pdfUrl: "/certificates/Segura-Ready-to-Sell-Portfolio-I.pdf",
     verified: true,
     description: {
-      en: "Comprehensive network defense, cryptography, penetration testing methodology, and enterprise perimeter security hardening.",
-      id: "Pertahanan jaringan komprehensif, kriptografi, metodologi pengujian penetrasi, dan perkuatan keamanan perimeter korporasi.",
+      en: "Completed Segura® Portfolio I (0d28-9aba-9257-309d), Foundation (15a7-e9ce-8ad8-43e9), and Go-To-Market (ff6c-f4af-444f-adb3) tracks.",
+      id: "Menyelesaikan rangkaian sertifikasi Segura® Portfolio I, Foundation, dan Go-To-Market Strategic Guide.",
+    },
+  },
+
+  // Google, ICSI, Acronis, Cyble & APGI
+  {
+    id: "google-play-it-safe",
+    title: "Play It Safe: Manage Security Risks",
+    issuer: "Google Career Certificates (Coursera / LinkedIn Verified)",
+    date: "LinkedIn Featured Credential",
+    category: "Google, ICSI & Acronis",
+    verified: true,
+    description: {
+      en: "Featured on LinkedIn profile: risk management frameworks (NIST RMF, CIS), SIEM tools, security audits, and incident response playbooks.",
+      id: "Tercantum pada profil LinkedIn: kerangka kerja manajemen risiko (NIST, CIS), penggunaan SIEM, audit keamanan, dan playbook respons insiden.",
     },
   },
   {
-    id: "cyble-cse",
-    title: "Cyble Certified Solutions Engineer",
-    issuer: "Cyble Threat Intelligence",
-    date: "Verified Credential",
-    category: "Security & PAM",
+    id: "icsi-cnss",
+    title: "ICSI | CNSS Certified Network Security Specialist",
+    issuer: "International CyberSecurity Institute (UK)",
+    date: "LinkedIn Featured Credential",
+    category: "Google, ICSI & Acronis",
     verified: true,
     description: {
-      en: "Specialized in dark web monitoring, cyber threat intelligence (CTI), attack surface management, and proactive threat hunting.",
-      id: "Spesialisasi dalam pemantauan dark web, Cyber Threat Intelligence (CTI), manajemen permukaan serangan, dan perburuan ancaman proaktif.",
+      en: "Featured on LinkedIn profile: comprehensive network defense, cryptography, penetration testing methodology, and perimeter hardening.",
+      id: "Tercantum pada profil LinkedIn: pertahanan jaringan komprehensif, kriptografi, metodologi uji penetrasi, dan perkuatan keamanan perimeter.",
     },
   },
   {
     id: "acronis-tech-pro",
-    title: "Acronis Cyber Protect Tech Pro & Advanced Security",
+    title: "Acronis Cyber Protect Tech Pro, Advanced Security & Cloud Tech Pro",
     issuer: "Acronis Academy",
-    date: "Verified Credential",
-    category: "Cloud & Backup",
+    date: "Verified Partner Credential",
+    category: "Google, ICSI & Acronis",
     verified: true,
     description: {
-      en: "Advanced enterprise backup architecture, XDR, Data Loss Prevention (DLP), disaster recovery failover, and anti-ransomware defense.",
-      id: "Arsitektur backup korporasi tingkat lanjut, XDR, Data Loss Prevention (DLP), pemulihan bencana (DR), dan pertahanan anti-ransomware.",
+      en: "Advanced enterprise backup architecture, Extended Detection & Response (XDR), Data Loss Prevention (DLP), and disaster recovery failover.",
+      id: "Arsitektur backup korporasi tingkat lanjut, Extended Detection & Response (XDR), Data Loss Prevention (DLP), dan pemulihan bencana (DR).",
     },
   },
   {
-    id: "ccsep-cloud-pro",
-    title: "Certified Cyber Security Educator Professional & Cloud Tech Pro",
-    issuer: "Professional Security & Cloud Credential",
+    id: "cyble-cse-ccsep",
+    title: "Cyble Certified Solutions Engineer & Cyber Security Educator (CCSEP)",
+    issuer: "Cyble Threat Intelligence & Professional Credential",
     date: "Verified Credential",
-    category: "Cloud & Backup",
+    category: "Google, ICSI & Acronis",
     verified: true,
     description: {
-      en: "Recognized for technical security leadership, client enablement, and modern hybrid-cloud infrastructure protection.",
-      id: "Diakui atas kepemimpinan edukasi keamanan siber, pemberdayaan teknis klien, dan proteksi infrastruktur hybrid-cloud modern.",
+      en: "Specialized in Cyber Threat Intelligence (CTI), attack surface management, dark web monitoring, and enterprise security education.",
+      id: "Spesialisasi dalam Cyber Threat Intelligence (CTI), manajemen permukaan serangan, pemantauan ancaman, dan edukasi keamanan siber.",
     },
   },
   {
@@ -743,25 +716,12 @@ export const CERTIFICATIONS_DATA: CertificationItem[] = [
     issuer: "Google Developer Groups (GDG)",
     date: "May 2026",
     credentialId: "JVC2605-57LN-H5NK",
-    category: "Software & SAR",
+    category: "Google, ICSI & Acronis",
     pdfUrl: "/certificates/GDG-JuaraVibeCoding-Ksatria.pdf",
     verified: true,
     description: {
       en: "Awarded by Google Developer Groups for modern AI-assisted software engineering and rapid full-stack product innovation.",
-      id: "Diberikan oleh Google Developer Groups atas rekayasa perangkat lunak modern berbasis AI dan inovasi pengembangan produk full-stack.",
-    },
-  },
-  {
-    id: "apgi-guide",
-    title: "Certified Indonesian Mountain Guide (Pemandu Gunung)",
-    issuer: "APGI (Asosiasi Pemandu Gunung Indonesia)",
-    date: "Active Member",
-    credentialId: "APGI.B26-03084",
-    category: "Software & SAR",
-    verified: true,
-    description: {
-      en: "Registered member of the Indonesian Mountain Guide Association specializing in high-altitude navigation (IMPK), survival, and expedition safety.",
-      id: "Anggota resmi Asosiasi Pemandu Gunung Indonesia dengan keahlian navigasi darat (IMPK), survival, dan manajemen keselamatan ekspedisi.",
+      id: "Diberikan oleh Google Developer Groups atas rekayasa perangkat lunak modern dan inovasi pengembangan produk full-stack.",
     },
   },
 ];
@@ -770,26 +730,26 @@ export const EDUCATION_DATA = [
   {
     institution: "Universitas Terbuka",
     degree: {
-      en: "Bachelor's Degree (S1) in Information Technology",
-      id: "Sarjana (S1) Teknologi Informasi",
+      en: "Bachelor of Science (S1) — Information Technology / Computer & Information Systems Security",
+      id: "Sarjana (S1) — Teknologi Informasi / Keamanan Sistem Informasi",
     },
     period: "2022 – 2026",
     location: "South Tangerang, Indonesia",
     description: {
-      en: "Focused on Network Security, Information Systems Architecture, Database Engineering, R Statistical Computing, and Web-Based Programming while working full-time in Enterprise IT & Cyber Security.",
-      id: "Berfokus pada Keamanan Jaringan, Arsitektur Sistem Informasi, Rekayasa Basis Data, Komputasi Statistik R, dan Pemrograman Berbasis Web sembari berkarier penuh waktu di industri IT & Cyber Security.",
+      en: "Focused on Computer & Information Systems Security, Information Assurance, Network Engineering, Statistical Computing (R), and Web-Based Programming while working full-time in Enterprise Cybersecurity.",
+      id: "Berfokus pada Keamanan Sistem Informasi, Jaminan Informasi (Information Assurance), Rekayasa Jaringan, Komputasi Statistik R, dan Pemrograman Web sembari berkarier penuh waktu di bidang Keamanan Siber.",
     },
   },
   {
     institution: "SMAN 09 Kota Tangerang Selatan",
     degree: {
-      en: "High School Diploma",
+      en: "High School Diploma — General Studies",
       id: "Sekolah Menengah Atas (SMA)",
     },
     period: "2018 – 2022",
     location: "South Tangerang, Banten",
     description: {
-      en: "Active leader in Scout & Emergency Response organizations while beginning professional web development career in 2019.",
+      en: "Active leader in Scout & Emergency Response organizations while beginning professional software & web development career in 2019.",
       id: "Aktif memimpin organisasi Pramuka & Tim Reaksi Cepat sembari memulai karier profesional sebagai Web Developer sejak 2019.",
     },
   },
@@ -840,8 +800,8 @@ export const LEADERSHIP_AND_SAR_DATA = [
     org: "Asosiasi Pemandu Gunung Indonesia (APGI)",
     period: "2021 – Present",
     highlight: {
-      en: "Led multiple high-altitude expeditions & survival trainings across Indonesia's major peaks: Mt. Rinjani (3,726m), Mt. Slamet (3,428m), Mt. Sumbing (3,371m), Mt. Lawu (3,265m), Mt. Merbabu (3,145m), Mt. Sindoro (3,153m), Mt. Gede Pangrango, Mt. Prau, and Mt. Halimun Salak.",
-      id: "Memimpin berbagai ekspedisi pendakian dan pelatihan survival di gunung-gunung utama Indonesia: Gn. Rinjani (3.726 mdpl), Gn. Slamet (3.428 mdpl), Gn. Sumbing (3.371 mdpl), Gn. Lawu, Gn. Merbabu, Gn. Sindoro, Gn. Gede Pangrango, Gn. Prau, dan Gn. Halimun Salak.",
+      en: "Registered member of the Indonesian Mountain Guide Association (APGI.B26-03084). Led expeditions across Mt. Rinjani (2x), Mt. Slamet, Mt. Sumbing, Mt. Lawu, Mt. Merbabu, Mt. Sindoro, Mt. Gede Pangrango (4x), Mt. Prau, and Mt. Halimun Salak.",
+      id: "Anggota resmi Asosiasi Pemandu Gunung Indonesia (APGI.B26-03084). Memimpin ekspedisi pendakian dan pelatihan survival di Gn. Rinjani (2x), Gn. Slamet, Gn. Sumbing, Gn. Lawu, Gn. Merbabu, Gn. Sindoro, Gn. Gede Pangrango (4x), Gn. Prau, dan Gn. Halimun Salak.",
     },
   },
 ];
